@@ -215,6 +215,7 @@ button:focus-visible {
   padding: 1.25rem 1.5rem;
 }
 
-ul.plain {
+/* Applies to ol as well as ul: ordered lists here supply their own markers. */
+.plain {
   list-style: none;
 }
