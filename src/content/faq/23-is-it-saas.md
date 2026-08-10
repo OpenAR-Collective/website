@@ -1,7 +1,8 @@
 ---
 question: "Is it in the cloud (SaaS)?"
+group: "The software"
 section: "The platform"
-order: 22
+order: 23
 ---
 No, not in the way that term is typically used. The platform is designed to be self-hosted, meaning each agency installs and runs its own copy on infrastructure it controls. That infrastructure can be cloud-based (AWS, Azure, Google Cloud, or any other cloud provider) or on-premises servers in your own data center. The choice is yours. What the Collective will not do is run a shared, centralized hosted service where every agency's data lives on Foundation-controlled servers.
 

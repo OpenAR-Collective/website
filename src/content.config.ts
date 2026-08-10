@@ -5,6 +5,7 @@ const faq = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/faq' }),
   schema: z.object({
     question: z.string(),
+    group: z.string(),
     section: z.string(),
     order: z.number(),
   }),

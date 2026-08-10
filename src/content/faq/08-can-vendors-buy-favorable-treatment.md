@@ -1,7 +1,8 @@
 ---
 question: "Can a vendor or large agency pay the Collective for favorable treatment, and will the Collective recommend or rank vendors at all?"
-section: "Why a nonprofit"
-order: 17
+group: "The Foundation"
+section: "Governance and funding"
+order: 8
 ---
 No on the first count, and not in the way most industry organizations do it on the second. The Collective will not sell endorsements, featured placements, sponsored content, vendor rankings, or favorable positioning of any kind. This is a structural feature of the Foundation's nonprofit charter and conflict-of-interest policies, not a policy decision that could change later. Accepting payment in exchange for promotional treatment would be inconsistent with the Foundation's charitable purpose and would violate its fiduciary obligations to the public. Charitable donations and sponsorships may be accepted, and donors may be acknowledged publicly the same way universities and museums acknowledge their supporters, but acknowledgment is not endorsement and donor relationships will not influence the Collective's content or programs.
 

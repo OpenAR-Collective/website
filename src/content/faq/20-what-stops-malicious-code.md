@@ -1,7 +1,8 @@
 ---
 question: "Is this even safe? What stops someone malicious from sneaking bad code in?"
-section: "How this works"
-order: 11
+group: "The software"
+section: "Building and running it"
+order: 20
 ---
 Open-source projects use formal change-control processes that, in many ways, offer better security than closed commercial software. Every proposed change to the platform is submitted as a public "pull request" that other contributors review before it can be accepted. Nothing makes it into the released software without passing review. The review history is public and permanent, so anyone can audit what changed, who proposed it, and who approved it.
 

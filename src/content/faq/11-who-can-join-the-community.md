@@ -1,7 +1,8 @@
 ---
 question: "Who can join the community? What does it cost?"
+group: "The Foundation"
 section: "The community"
-order: 19
+order: 11
 ---
 Anyone can join, and there is no cost. The community has two tiers. The public tier is open to anyone in the world with no qualification required; it serves as an entry point for people exploring the Collective's resources. The verified practitioner tier is where substantive professional discussion happens, and it is open to anyone with a professional engagement with the AR industry: agency staff, creditors, vendors, attorneys, regulators, academics, advocates, and so on. Verification confirms that engagement; there is no fee, no financial commitment, and no requirement to affiliate with any organization.
 

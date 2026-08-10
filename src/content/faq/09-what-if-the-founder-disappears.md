@@ -1,6 +1,7 @@
 ---
 question: "What happens to the project if the founder loses interest, runs out of money, or gets hit by a bus?"
-section: "How this works"
+group: "The Foundation"
+section: "Governance and funding"
 order: 9
 ---
 This is exactly the risk that the open-source model and the nonprofit structure are designed to address. Because the source code is public, no single person can take it away. If the founder disappears tomorrow, every agency running the platform keeps running it, every developer with a copy of the code keeps having it, and the community can continue developing it independently if the original organization fails.

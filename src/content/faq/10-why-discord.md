@@ -1,7 +1,8 @@
 ---
 question: "Why Discord, of all places? Isn't that for video games?"
+group: "The Foundation"
 section: "The community"
-order: 18
+order: 10
 ---
 Discord started as a gaming platform but has evolved into one of the most widely used real-time community platforms on the internet. It is now the platform of choice for countless professional, technical, and special-interest communities, including major open-source software projects, academic research groups, financial services communities, and developer organizations of every kind. The reason is straightforward: Discord does what a community platform needs to do, does it well, and does it free of charge.
 

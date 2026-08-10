@@ -1,7 +1,8 @@
 ---
 question: "What is open-source software, in plain language?"
-section: "The basics"
-order: 2
+group: "The software"
+section: "Open source, explained"
+order: 13
 ---
 Open-source software is software whose source code, the human-readable instructions that tell the computer what to do, is published publicly for anyone to read, copy, modify, and use. There is no licensing fee, no per-seat cost, and no vendor relationship required. You can download it, run it, and change it to fit your needs.
 

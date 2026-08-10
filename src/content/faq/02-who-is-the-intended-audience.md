@@ -1,7 +1,8 @@
 ---
 question: "Who is the intended audience?"
-section: "Who this is for"
-order: 12
+group: "The Foundation"
+section: "About the Foundation"
+order: 2
 ---
 Everyone who works in, with, or around the accounts receivable and debt collection industry. That includes:
 

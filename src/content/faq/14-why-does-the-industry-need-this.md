@@ -1,7 +1,8 @@
 ---
 question: "Why does an industry need open-source software at all? Isn't the commercial market working?"
-section: "The basics"
-order: 3
+group: "The software"
+section: "Open source, explained"
+order: 14
 ---
 The commercial market works for some agencies and not for others. The AR software market has essentially split into two tiers: older platforms struggling to keep up with modern compliance, integration, and interface standards, and newer platforms whose per-seat or transaction-based pricing cuts deeply into profit margins. The middle ground, capable software at a price any agency can absorb, has been hollowed out.
 

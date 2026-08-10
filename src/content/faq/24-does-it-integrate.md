@@ -1,7 +1,8 @@
 ---
 question: "Does it integrate with my vendors?"
+group: "The software"
 section: "The platform"
-order: 23
+order: 24
 ---
 That is the goal, and the platform is being designed from the start to make integration straightforward. The platform exposes a documented, versioned API, a defined set of technical entry points that other systems can connect to, which means any vendor with the technical capability can build an integration. Common AR industry integrations (credit reporting, skip tracing, payment processing, letter vendors, dialer systems, scoring services, and so on) are exactly the kinds of connections the platform's module system is built to support.
 

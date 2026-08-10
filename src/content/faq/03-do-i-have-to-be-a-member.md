@@ -1,7 +1,8 @@
 ---
 question: "Do I have to be a member, pay dues, or join anything to use it?"
-section: "Who this is for"
-order: 13
+group: "The Foundation"
+section: "About the Foundation"
+order: 3
 ---
 No. The Collective has no membership fees and no membership requirement to access anything it produces. The software, the documentation, the educational resources, the webinars, and the community are all free and open to anyone.
 

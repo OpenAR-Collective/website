@@ -1,7 +1,8 @@
 ---
 question: "Why is this set up as a nonprofit instead of a regular company?"
-section: "Why a nonprofit"
-order: 15
+group: "The Foundation"
+section: "Governance and funding"
+order: 5
 ---
 A nonprofit is the right structure for a project that exists to serve the public rather than to generate returns for owners or investors. The Collective has no shareholders, no equity, and no profit motive. Everything it earns goes back into the mission. Its only obligation is to the public benefit it was organized to serve.
 

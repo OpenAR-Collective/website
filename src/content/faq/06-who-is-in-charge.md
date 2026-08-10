@@ -1,7 +1,8 @@
 ---
 question: "Who is in charge, and who do they answer to?"
-section: "Why a nonprofit"
-order: 16
+group: "The Foundation"
+section: "Governance and funding"
+order: 6
 ---
 The Collective is governed by a Board of Directors, not by the founder personally. The Board is responsible for the Foundation's strategic direction, financial stewardship, and adherence to its mission. Directors are recruited for their expertise, including legal and compliance, financial, consumer advocacy, academic, and fundraising backgrounds, and serve in a fiduciary capacity, meaning they are legally obligated to act in the Foundation's best interest, not their own or any outside party's.
 

@@ -1,7 +1,8 @@
 ---
 question: "Who supports it when something breaks at 2 a.m.?"
-section: "How this works"
-order: 8
+group: "The software"
+section: "Building and running it"
+order: 18
 ---
 This is one of the most important questions, and the honest answer has two parts.
 

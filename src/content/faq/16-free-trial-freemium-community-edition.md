@@ -1,7 +1,8 @@
 ---
 question: "How is this different from a free trial, a freemium tier, or \"community edition\" software?"
-section: "The basics"
-order: 5
+group: "The software"
+section: "Open source, explained"
+order: 16
 ---
 Free trials and freemium products are commercial offerings designed to convert you into a paying customer. They typically have time limits, feature limits, user limits, or all three. The vendor's goal is to give you enough to get hooked and then charge you when you outgrow the free version. "Community editions" of commercial software are similar: usually a stripped-down version of a paid product, controlled by a company whose primary business is selling the full version.
 

@@ -1,7 +1,8 @@
 ---
 question: "Is my data safe in software whose source code anyone can read?"
+group: "The software"
 section: "The platform"
-order: 24
+order: 25
 ---
 Yes, and arguably safer than in proprietary software. This is a common misconception worth addressing directly. Publishing source code does not expose your data; it exposes the rules the software follows. Your actual data, the consumer information, the account history, the financial records, lives in a database that you control, on infrastructure that you control, behind security measures that you implement. Nothing about the source code being public changes that.
 

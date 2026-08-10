@@ -1,7 +1,8 @@
 ---
 question: "Do I have to be technical to get value from the Collective?"
-section: "Who this is for"
-order: 14
+group: "The Foundation"
+section: "About the Foundation"
+order: 4
 ---
 Not at all. While the flagship software platform is obviously technical in nature, most of what the Collective offers is not. The peer community is open to anyone. The educational resources are written for practitioners, not engineers. The compliance reference materials are aimed at the people doing compliance work, regardless of technical background. The webinars and workshops cover operational and regulatory topics alongside technical ones. If you are an agency owner or operator, a compliance professional, a vendor, an attorney, a consumer advocate, or a researcher, there are resources and community spaces oriented to your work.
 

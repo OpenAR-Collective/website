@@ -1,7 +1,8 @@
 ---
 question: "Is the software really free? What's the catch?"
-section: "The basics"
-order: 4
+group: "The software"
+section: "Open source, explained"
+order: 15
 ---
 Yes, really. The software will be available under a standard open-source license that permits anyone to download it, run it, modify it, and use it commercially, with no fee owed to the Collective ever. This is not a trial, not a starter tier, and not a feature-limited version. It is the actual platform.
 

@@ -1,7 +1,8 @@
 ---
 question: "Who builds open-source software? Volunteers in their basements?"
-section: "How this works"
-order: 7
+group: "The software"
+section: "Building and running it"
+order: 17
 ---
 Some of it, sure. Most successful open-source projects, however, are built by a mix of paid professionals, part-time contractors, volunteer contributors who donate their time, and increasingly, developers using AI-assisted tools to accelerate routine work. The OpenAR Collective follows this pattern. The founder contributes significant time and personal funding, part-time contractors handle specialized work, and volunteer contributors from the community will participate as the project matures.
 

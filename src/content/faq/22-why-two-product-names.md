@@ -1,7 +1,8 @@
 ---
 question: "Why are there two product names, Wax and HiveAR?"
+group: "The software"
 section: "The platform"
-order: 21
+order: 22
 ---
 The platform is built in two layers, and the two names reflect the two layers. Wax is a general-purpose application framework: the foundation that handles things every business application needs, like user accounts, audit trails, workflow automation, and the structural plumbing that nothing visible could work without. HiveAR is the AR-specific platform built on top of Wax: the accounts, payments, compliance workflows, and other features that make it useful for collections work.
 
