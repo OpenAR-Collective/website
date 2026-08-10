@@ -51,11 +51,12 @@ html {
   }
 }
 
+/* The page background lives on html only: an opaque body background would
+   paint over the fixed negative-z hex grid layers. */
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--c-bg);
   color: var(--c-text);
   font-family: var(--f-sans);
   font-weight: 340;
