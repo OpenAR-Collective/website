@@ -57,9 +57,14 @@
     z-index: -1;
   }
 
+  /* Strokes are opaque and faintness comes from the layer opacity: shared
+     hex edges are painted twice by adjacent outlines, and translucent
+     strokes would double up into heavier lines. The pattern is phase
+     shifted a half cell so no stroke lies on the tile seam. */
   .hex-base {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='62.354' viewBox='0 0 108 62.354'><g fill='none' stroke='rgba(232,160,32,0.09)' stroke-width='1.2'><polygon points='90,31.177 72,62.354 36,62.354 18,31.177 36,0 72,0'/><polygon points='36,0 18,31.177 -18,31.177 -36,0 -18,-31.177 18,-31.177'/><polygon points='144,0 126,31.177 90,31.177 72,0 90,-31.177 126,-31.177'/><polygon points='36,62.354 18,93.531 -18,93.531 -36,62.354 -18,31.177 18,31.177'/><polygon points='144,62.354 126,93.531 90,93.531 72,62.354 90,31.177 126,31.177'/></g></svg>");
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='62.354' viewBox='0 0 108 62.354'><g fill='none' stroke='%23E8A020' stroke-width='1.2'><polygon points='36,15.588 18,46.765 -18,46.765 -36,15.588 -18,-15.589 18,-15.589'/><polygon points='144,15.588 126,46.765 90,46.765 72,15.588 90,-15.589 126,-15.589'/><polygon points='36,77.943 18,109.12 -18,109.12 -36,77.943 -18,46.766 18,46.766'/><polygon points='144,77.943 126,109.12 90,109.12 72,77.943 90,46.766 126,46.766'/><polygon points='90,46.766 72,77.943 36,77.943 18,46.766 36,15.589 72,15.589'/><polygon points='90,-15.589 72,15.588 36,15.588 18,-15.589 36,-46.766 72,-46.766'/></g></svg>");
     background-size: 108px 62.354px;
+    opacity: 0.13;
   }
 
   .hex-glow {
@@ -69,7 +74,7 @@
         rgba(232, 160, 32, 0.1),
         transparent 70%
       ),
-      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='62.354' viewBox='0 0 108 62.354'><g fill='none' stroke='%23F5B830' stroke-width='1.2'><polygon points='90,31.177 72,62.354 36,62.354 18,31.177 36,0 72,0'/><polygon points='36,0 18,31.177 -18,31.177 -36,0 -18,-31.177 18,-31.177'/><polygon points='144,0 126,31.177 90,31.177 72,0 90,-31.177 126,-31.177'/><polygon points='36,62.354 18,93.531 -18,93.531 -36,62.354 -18,31.177 18,31.177'/><polygon points='144,62.354 126,93.531 90,93.531 72,62.354 90,31.177 126,31.177'/></g></svg>");
+      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='62.354' viewBox='0 0 108 62.354'><g fill='none' stroke='%23F5B830' stroke-width='1.2'><polygon points='36,15.588 18,46.765 -18,46.765 -36,15.588 -18,-15.589 18,-15.589'/><polygon points='144,15.588 126,46.765 90,46.765 72,15.588 90,-15.589 126,-15.589'/><polygon points='36,77.943 18,109.12 -18,109.12 -36,77.943 -18,46.766 18,46.766'/><polygon points='144,77.943 126,109.12 90,109.12 72,77.943 90,46.766 126,46.766'/><polygon points='90,46.766 72,77.943 36,77.943 18,46.766 36,15.589 72,15.589'/><polygon points='90,-15.589 72,15.588 36,15.588 18,-15.589 36,-46.766 72,-46.766'/></g></svg>");
     background-size: auto, 108px 62.354px;
     opacity: 0;
     transition: opacity 0.45s ease;
