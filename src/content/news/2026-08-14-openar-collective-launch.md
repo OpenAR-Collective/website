@@ -9,7 +9,7 @@ imageAlt: "OpenAR Collective wordmark over an amber hex grid glowing toward the 
 
 **FORT WORTH, Texas, August 14, 2026.** A new nonprofit organization built to serve the accounts receivable and debt collection industry announced its formation today. The Open Accounts Receivable Collective Foundation, operating as The OpenAR Collective, will provide the industry with free, openly licensed software, open educational and compliance resources, and a peer community that belongs to its practitioners rather than to any company inside it.
 
-The Foundation is a Delaware non-stock nonprofit corporation, incorporated April 13, 2026. It charges no fees, sells nothing, requires no membership to use its resources, and does not engage in lobbying or political advocacy.
+The Foundation is a Delaware non-stock nonprofit corporation, incorporated April 13, 2026. Its software and published resources are free, no membership is required to use them, and it does not engage in lobbying or political advocacy.
 
 The gap it aims to fill is a specific one. The accounts receivable industry manages hundreds of billions of dollars in consumer and commercial debt annually and touches the financial lives of tens of millions of Americans. Practitioners have access to newsletters, conferences, and trade association programming, all of which provide genuine value. What has not existed is a neutral, nonprofit space with no commercial constituency and no sponsor-driven incentive, where a two-person agency and a national one can use the same tools, read the same guidance, and answer each other's questions.
 
@@ -67,12 +67,12 @@ Grafrath will speak at the Brainstorm conference on September 9, 2026. The Found
 
 ## About The OpenAR Collective
 
-The Open Accounts Receivable Collective Foundation, operating under the trade name The OpenAR Collective, is a Delaware nonprofit corporation working to make accounts receivable and debt collection more transparent, more compliant, and more accountable to the consumers it touches. It builds software under an open-source license so anyone can run, inspect, modify, and redistribute it at no cost. The Foundation also publishes open educational and compliance resources, develops shared standards, delivers training, and maintains a neutral, community-governed commons where practitioners learn from one another. The Foundation charges no fees, sells nothing, and does not engage in lobbying or political advocacy. More information is available at [openarcollective.org](https://openarcollective.org).
+The Open Accounts Receivable Collective Foundation, operating under the trade name The OpenAR Collective, is a Delaware nonprofit corporation working to make accounts receivable and debt collection more transparent, more compliant, and more accountable to the consumers it touches. It builds software under an open-source license so anyone can run, inspect, modify, and redistribute it at no cost. The Foundation also publishes open educational and compliance resources, develops shared standards, delivers training, and maintains a neutral, community-governed commons where practitioners learn from one another. The Foundation's software and published resources are free, and it does not engage in lobbying or political advocacy. More information is available at [openarcollective.org](https://openarcollective.org).
 
 **Media contact**\
 Rob Grafrath, Chair\
 The OpenAR Collective\
-[rob@openarcollective.org](mailto:rob@openarcollective.org)\
+[press@openarcollective.org](mailto:press@openarcollective.org)\
 [openarcollective.org](https://openarcollective.org)
 
 \###
