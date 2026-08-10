@@ -1,0 +1,19 @@
+# Working materials, drafts, and source assets. Never commit.
+_Scratch/
+
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
