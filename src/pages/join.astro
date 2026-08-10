@@ -79,6 +79,73 @@ const description =
         </a>
       </section>
     </div>
+
+    <section class="joining" aria-labelledby="what-happens">
+      <h2 id="what-happens">What happens when you join</h2>
+      <p class="joining-lede">
+        Membership is reviewed by a person, not granted automatically. Here is the whole process.
+      </p>
+
+      <ol class="plain steps">
+        <li>
+          <span class="step-n">1</span>
+          <h3>You apply</h3>
+          <p>
+            The form asks for your name, email address, employer or affiliation, and professional
+            role. It takes a couple of minutes.
+          </p>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <h3>The Foundation checks your details</h3>
+          <p>
+            Your email address is confirmed and your stated employer or affiliation is reviewed.
+            This usually takes a few days.
+          </p>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <h3>You receive your member number</h3>
+          <p>
+            Approval arrives by email with your member number and an invitation to the Foundation's
+            Discord server.
+          </p>
+        </li>
+        <li>
+          <span class="step-n">4</span>
+          <h3>You join the community</h3>
+          <p>
+            A moderator assigns your Member role, which opens the members-only channels where the
+            substantive discussion happens.
+          </p>
+        </li>
+      </ol>
+
+      <div class="notes">
+        <div>
+          <h3>The community uses real names</h3>
+          <p>
+            Your server nickname is set to match your application, and only a moderator can change
+            it. Practitioners speak more frankly when they know who is in the room, and that is what
+            the verification step protects.
+          </p>
+        </div>
+        <div>
+          <h3>New to Discord?</h3>
+          <p>
+            Many members are. Your welcome email includes a walkthrough, and people in the community
+            are glad to help you find your way around.
+          </p>
+        </div>
+        <div>
+          <h3>You do not need any of this to use our work</h3>
+          <p>
+            Everything the Foundation publishes is free on this website, with no account, no
+            membership, and no sign-in. Membership adds the peer community, nothing more.
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </Base>
 
@@ -127,5 +194,94 @@ const description =
   .path .btn {
     margin-top: 1.5rem;
     align-self: flex-start;
+  }
+
+  .joining {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--c-line);
+  }
+
+  .joining-lede {
+    margin-top: 0.6rem;
+    color: var(--c-text-soft);
+  }
+
+  /* Explicit counts rather than auto-fit: four steps and three notes would
+     otherwise orphan a single card on a second row at middling widths. */
+  .steps {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+  }
+
+  @media (max-width: 62rem) {
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 34rem) {
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .step-n {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border: 1px solid rgba(232, 160, 32, 0.5);
+    border-radius: 50%;
+    font-family: var(--f-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--c-amber);
+  }
+
+  .steps h3 {
+    margin-top: 0.7rem;
+    font-size: 1.02rem;
+  }
+
+  .steps p {
+    margin-top: 0.4rem;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--c-text-soft);
+  }
+
+  .notes {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 56rem) {
+    .notes {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .notes > div {
+    border: 1px solid var(--c-line);
+    border-radius: 3px;
+    background: rgba(22, 20, 16, 0.5);
+    padding: 1.2rem 1.35rem 1.35rem;
+  }
+
+  .notes h3 {
+    font-size: 1rem;
+  }
+
+  .notes p {
+    margin-top: 0.45rem;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--c-text-soft);
   }
 </style>
