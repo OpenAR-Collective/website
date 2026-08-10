@@ -2,9 +2,14 @@
 interface Props {
   size?: number;
   id?: string;
+  stroke?: number;
 }
-const { size = 96, id = 'hex' } = Astro.props;
-const height = Math.round(size * 0.872);
+const { size = 96, id = 'hex', stroke } = Astro.props;
+// At small rendered sizes the 9-unit ring falls below a pixel and reads as
+// fuzz, so the ring thickens as the mark shrinks: about 1.5px rendered,
+// never thinner than the reference 9 units.
+const sw = stroke ?? Math.max(9, Math.min(24, Math.round((1.5 * 420) / size)));
+const height = Math.round(size * (366 / 420) * 100) / 100;
 ---
 
 <svg
@@ -24,5 +29,5 @@ const height = Math.round(size * 0.872);
     points="456,256 356,429.205 156,429.205 56,256 156,82.795 356,82.795"
     fill={`url(#${id})`}
     stroke="#F8D060"
-    stroke-width="9"></polygon>
+    stroke-width={sw}></polygon>
 </svg>
