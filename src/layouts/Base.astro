@@ -6,9 +6,10 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  image?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, image = '/android-chrome-512x512.png' } = Astro.props;
 const pageTitle =
   title === 'OpenAR Collective' ? title : `${title} | OpenAR Collective`;
 ---
@@ -21,7 +22,7 @@ const pageTitle =
     <meta name="description" content={description} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://openarcollective.org/android-chrome-512x512.png" />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

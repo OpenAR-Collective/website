@@ -1,0 +1,82 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('news');
+  return entries.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const dateStr = entry.data.date.toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<Base title={entry.data.title} description={entry.data.description} image={entry.data.image}>
+  <div class="wrap">
+    <article>
+      <div class="page-head">
+        <p class="overline">
+          {entry.data.category} &middot;
+        <time datetime={entry.data.date.toISOString().slice(0, 10)}>{dateStr}</time>
+        </p>
+        <h1>{entry.data.title}</h1>
+        <p class="lede">{entry.data.description}</p>
+      </div>
+      <img
+        class="hero-img"
+        src={entry.data.image}
+        alt={entry.data.imageAlt}
+        width="1200"
+        height="630"
+      />
+      <div class="body prose">
+        <Content />
+      </div>
+      <p class="back">
+        <a href="/news/">All news</a>
+      </p>
+    </article>
+  </div>
+</Base>
+
+<style>
+  .hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--c-line);
+    border-radius: 4px;
+  }
+
+  .body {
+    margin-top: 2.5rem;
+  }
+
+  .body :global(h2) {
+    margin: 2.25rem 0 1rem;
+  }
+
+  .body :global(p + p) {
+    margin-top: 1rem;
+  }
+
+  .body :global(ul) {
+    margin: 1rem 0;
+    padding-left: 1.4rem;
+  }
+
+  .body :global(li + li) {
+    margin-top: 0.6rem;
+  }
+
+  .back {
+    margin-top: 3rem;
+  }
+</style>

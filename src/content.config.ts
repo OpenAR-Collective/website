@@ -19,6 +19,18 @@ const supporters = defineCollection({
   }),
 });
 
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+    category: z.string(),
+    image: z.string(),
+    imageAlt: z.string(),
+  }),
+});
+
 const board = defineCollection({
   loader: file('./src/data/board.json'),
   schema: z.object({
@@ -40,4 +52,4 @@ const marks = defineCollection({
   }),
 });
 
-export const collections = { faq, supporters, board, marks };
+export const collections = { faq, supporters, board, marks, news };

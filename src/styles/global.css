@@ -146,8 +146,9 @@ button:focus-visible {
   border-top: 1px solid var(--c-line);
 }
 
+/* Half opaque so the fixed hex grid reads through banded sections. */
 .section-alt {
-  background: var(--c-surface);
+  background: rgba(22, 20, 16, 0.5);
 }
 
 .overline {

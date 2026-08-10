@@ -1,0 +1,97 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('news')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+
+const description =
+  'News and press releases from The Open Accounts Receivable Collective Foundation.';
+---
+
+<Base title="News" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">News</p>
+      <h1>News and press releases</h1>
+      <p class="lede">
+        Announcements from the Foundation. Media inquiries are welcome at
+        <a href="mailto:press@openarcollective.org">press@openarcollective.org</a>.
+      </p>
+    </div>
+
+    <ul class="plain articles">
+      {
+        articles.map((a) => (
+          <li>
+            <article>
+              <a class="card" href={`/news/${a.id}/`}>
+                <img src={a.data.image} alt={a.data.imageAlt} width="1200" height="630" loading="lazy" />
+                <div class="meta">
+                  <p class="overline">
+                    {a.data.category} &middot; <time datetime={a.data.date.toISOString().slice(0, 10)}>{fmt(a.data.date)}</time>
+                  </p>
+                  <h2>{a.data.title}</h2>
+                  <p class="desc">{a.data.description}</p>
+                </div>
+              </a>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Base>
+
+<style>
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    display: block;
+    border: 1px solid var(--c-line);
+    border-radius: 4px;
+    background: rgba(22, 20, 16, 0.5);
+    text-decoration: none;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .card:hover {
+    border-color: rgba(232, 160, 32, 0.45);
+  }
+
+  .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .meta {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .card h2 {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--c-text);
+  }
+
+  .card:hover h2 {
+    color: var(--c-amber-light);
+  }
+
+  .desc {
+    margin-top: 0.6rem;
+    color: var(--c-text-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+</style>
