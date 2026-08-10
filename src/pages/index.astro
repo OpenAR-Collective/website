@@ -1,4 +1,6 @@
 ---
+import HexGlow from '../components/HexGlow.astro';
+
 const description =
   'The Open Accounts Receivable Collective Foundation works to make accounts receivable and debt collection more transparent, more compliant, and more accountable to the consumers it touches.';
 ---
@@ -27,6 +29,7 @@ const description =
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
+    <HexGlow />
     <main>
       <svg viewBox="46 73 420 366" width="96" height="84" aria-hidden="true">
         <defs>
@@ -52,8 +55,8 @@ const description =
         community-governed commons where practitioners learn from one another.
       </p>
       <p class="status">
-        Our full website is on the way. Questions are welcome at
-        <a href="mailto:rob@openarcollective.org">rob@openarcollective.org</a>.
+        Our full website is on the way. Questions are welcome
+        at <a href="mailto:info@openarcollective.org">info@openarcollective.org</a>.
       </p>
     </main>
     <footer>
@@ -96,8 +99,7 @@ const description =
     justify-content: center;
     gap: 2rem;
     padding: 2rem 1.5rem;
-    background: radial-gradient(ellipse at 50% 30%, rgba(232, 160, 32, 0.06) 0%, transparent 65%)
-      #0e0d0b;
+    background: radial-gradient(ellipse at 50% 30%, rgba(232, 160, 32, 0.06) 0%, transparent 65%);
     color: #f4efe6;
     font-family:
       system-ui,
@@ -112,7 +114,7 @@ const description =
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 40rem;
+    max-width: 46rem;
   }
 
   h1 {
@@ -143,6 +145,7 @@ const description =
     font-weight: 300;
     line-height: 1.75;
     color: rgba(244, 239, 230, 0.82);
+    text-align: justify;
   }
 
   .status {

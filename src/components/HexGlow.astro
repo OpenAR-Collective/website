@@ -1,0 +1,94 @@
+---
+// Decorative full-viewport hex grid. A faint base layer is always visible;
+// a brighter layer is masked to a radial spot that follows the cursor.
+// Hidden from assistive tech, inert to pointers, and static (base layer
+// only) on touch devices and under prefers-reduced-motion.
+---
+
+<div class="hex-field" id="hexglow" aria-hidden="true">
+  <div class="hex-base"></div>
+  <div class="hex-glow"></div>
+</div>
+
+<script is:inline>
+  (() => {
+    const field = document.getElementById('hexglow');
+    if (!field) return;
+    if (
+      !matchMedia('(hover: hover)').matches ||
+      matchMedia('(prefers-reduced-motion: reduce)').matches
+    )
+      return;
+    const glow = field.querySelector('.hex-glow');
+    let x = 0;
+    let y = 0;
+    let raf = 0;
+    addEventListener(
+      'pointermove',
+      (e) => {
+        x = e.clientX;
+        y = e.clientY;
+        if (raf) return;
+        raf = requestAnimationFrame(() => {
+          raf = 0;
+          glow.style.setProperty('--mx', x + 'px');
+          glow.style.setProperty('--my', y + 'px');
+          glow.style.opacity = '1';
+        });
+      },
+      { passive: true }
+    );
+    document.documentElement.addEventListener('mouseleave', () => {
+      glow.style.opacity = '0';
+    });
+  })();
+</script>
+
+<style>
+  .hex-field,
+  .hex-base,
+  .hex-glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .hex-field {
+    z-index: -1;
+  }
+
+  /* Strokes are opaque and faintness comes from the layer opacity: shared
+     hex edges are painted twice by adjacent outlines, and translucent
+     strokes would double up into heavier lines. The pattern is phase
+     shifted a half cell so no stroke lies on the tile seam. */
+  .hex-base {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='62.354' viewBox='0 0 108 62.354'><g fill='none' stroke='%23E8A020' stroke-width='1.2'><polygon points='36,15.588 18,46.765 -18,46.765 -36,15.588 -18,-15.589 18,-15.589'/><polygon points='144,15.588 126,46.765 90,46.765 72,15.588 90,-15.589 126,-15.589'/><polygon points='36,77.943 18,109.12 -18,109.12 -36,77.943 -18,46.766 18,46.766'/><polygon points='144,77.943 126,109.12 90,109.12 72,77.943 90,46.766 126,46.766'/><polygon points='90,46.766 72,77.943 36,77.943 18,46.766 36,15.589 72,15.589'/><polygon points='90,-15.589 72,15.588 36,15.588 18,-15.589 36,-46.766 72,-46.766'/></g></svg>");
+    background-size: 108px 62.354px;
+    opacity: 0.13;
+  }
+
+  .hex-glow {
+    background-image:
+      radial-gradient(
+        300px circle at var(--mx, 50%) var(--my, 30%),
+        rgba(232, 160, 32, 0.1),
+        transparent 70%
+      ),
+      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='108' height='62.354' viewBox='0 0 108 62.354'><g fill='none' stroke='%23F5B830' stroke-width='1.2'><polygon points='36,15.588 18,46.765 -18,46.765 -36,15.588 -18,-15.589 18,-15.589'/><polygon points='144,15.588 126,46.765 90,46.765 72,15.588 90,-15.589 126,-15.589'/><polygon points='36,77.943 18,109.12 -18,109.12 -36,77.943 -18,46.766 18,46.766'/><polygon points='144,77.943 126,109.12 90,109.12 72,77.943 90,46.766 126,46.766'/><polygon points='90,46.766 72,77.943 36,77.943 18,46.766 36,15.589 72,15.589'/><polygon points='90,-15.589 72,15.588 36,15.588 18,-15.589 36,-46.766 72,-46.766'/></g></svg>");
+    background-size: auto, 108px 62.354px;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    -webkit-mask-image: radial-gradient(
+      280px circle at var(--mx, 50%) var(--my, 30%),
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.3) 45%,
+      transparent 72%
+    );
+    mask-image: radial-gradient(
+      280px circle at var(--mx, 50%) var(--my, 30%),
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.3) 45%,
+      transparent 72%
+    );
+  }
+</style>
