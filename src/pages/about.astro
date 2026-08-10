@@ -80,10 +80,10 @@ const description =
                 <h3>{m.data.name}</h3>
                 <p class="office">{m.data.office}</p>
                 <p class="bio">{m.data.bio}</p>
-                <p class="li">
-                  <a href={m.data.linkedin} rel="noopener">
-                    {m.data.name} on LinkedIn
-                  </a>
+                <p class="contact">
+                  <a href={`mailto:${m.data.email}`}>{m.data.email}</a>
+                  <span aria-hidden="true">&middot;</span>
+                  <a href={m.data.linkedin} rel="noopener">LinkedIn</a>
                 </p>
               </div>
             </li>
@@ -144,8 +144,15 @@ const description =
     font-size: 0.98rem;
   }
 
-  .li {
+  .contact {
     margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     font-size: 0.9rem;
+  }
+
+  .contact span {
+    color: var(--c-muted);
   }
 </style>

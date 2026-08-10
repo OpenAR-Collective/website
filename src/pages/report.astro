@@ -53,27 +53,29 @@ const description =
           </p>
         </div>
 
-        <div class="route">
+        <div class="route route-wide">
           <h3>Anonymous report</h3>
-          <p>
-            To report anonymously, send a written report by postal mail with no return address:
-          </p>
-          <address>
-            The Open Accounts Receivable Collective Foundation<br />
-            RE: Whistleblower Report<br />
-            3000 S Hulen Street<br />
-            Suite 124-735<br />
-            Fort Worth, TX 76109
-          </address>
-          <p>
-            If your concern involves the Chair, address the envelope to <strong>ATTN: Vice
-            Chair</strong> or <strong>ATTN: Secretary</strong>. The Chair does not open mail
-            addressed that way.
-          </p>
-          <p>
-            Anonymous reports will be investigated to the extent possible given the information
-            provided.
-          </p>
+          <p>To report anonymously, send a written report by postal mail with no return address.</p>
+          <div class="wide-body">
+            <address>
+              The Open Accounts Receivable Collective Foundation<br />
+              RE: Whistleblower Report<br />
+              3000 S Hulen Street<br />
+              Suite 124-735<br />
+              Fort Worth, TX 76109
+            </address>
+            <div class="wide-notes">
+              <p>
+                If your concern involves the Chair, address the envelope to <strong>ATTN: Vice
+                Chair</strong> or <strong>ATTN: Secretary</strong>. The Chair does not open mail
+                addressed that way.
+              </p>
+              <p>
+                Anonymous reports will be investigated to the extent possible given the information
+                provided.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -121,10 +123,40 @@ const description =
     margin-bottom: 1.5rem;
   }
 
+  /* The two email channels sit side by side, with the longer anonymous route
+     spanning beneath them. */
   .routes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
+  }
+
+  .route-wide {
+    grid-column: 1 / -1;
+  }
+
+  @media (max-width: 44rem) {
+    .routes {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .wide-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 2.5rem;
+    align-items: start;
+    margin-top: 0.85rem;
+  }
+
+  @media (max-width: 44rem) {
+    .wide-body {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .wide-notes p:first-child {
+    margin-top: 0;
   }
 
   .route {
@@ -149,7 +181,6 @@ const description =
   }
 
   .route address {
-    margin-top: 0.85rem;
     padding-left: 0.9rem;
     border-left: 2px solid var(--c-line);
     font-style: normal;

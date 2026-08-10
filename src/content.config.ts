@@ -49,6 +49,7 @@ const board = defineCollection({
     office: z.string(),
     bio: z.string(),
     photo: z.string(),
+    email: z.string().email(),
     linkedin: z.string().url(),
     order: z.number(),
   }),

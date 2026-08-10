@@ -6,7 +6,8 @@
     "bio": "Founder of the Foundation, with 27 years in accounts receivable, beginning as a collector in 1999 and moving through senior technology and business development leadership at collection agencies, debt buyers, and a receivables software platform. He currently works as an independent technology consultant to the industry.",
     "photo": "/assets/board/RobGrafrath.jpg",
     "linkedin": "https://www.linkedin.com/in/grafrath/",
-    "order": 1
+    "order": 1,
+    "email": "rob@openarcollective.org"
   },
   {
     "id": "mark-cavin",
@@ -15,7 +16,8 @@
     "bio": "A career collections executive who has led recovery operations for consumer, commercial, and student loan portfolios, and who formerly served as Debt Collections Market Senior Policy Fellow at the Consumer Financial Protection Bureau. He consults for the industry and serves as an expert witness.",
     "photo": "/assets/board/MarkCavin.jpg",
     "linkedin": "https://www.linkedin.com/in/markcavin/",
-    "order": 2
+    "order": 2,
+    "email": "mark@openarcollective.org"
   },
   {
     "id": "heath-morgan",
@@ -24,7 +26,8 @@
     "bio": "A third-generation collection attorney who grew up in the industry and has spent nearly two decades as counsel to collection agencies, collection law firms, debt buyers, healthcare providers, and technology companies. He speaks and writes frequently on artificial intelligence, compliance, and the future of the industry.",
     "photo": "/assets/board/HeathMorgan.jpg",
     "linkedin": "https://www.linkedin.com/in/porterheathmorgan4/",
-    "order": 3
+    "order": 3,
+    "email": "heath@openarcollective.org"
   },
   {
     "id": "donna-weaver",
@@ -33,7 +36,8 @@
     "bio": "A product-focused entrepreneur whose career spans consumer finance, procurement, and collections, including her tenure as President of RNN Group. She is the founder and Chief Executive Officer of Debt Free Americans, a nonprofit working to help consumers get out of debt.",
     "photo": "/assets/board/DonnaWeaver.jpg",
     "linkedin": "https://www.linkedin.com/in/donna-weaver-3925164/",
-    "order": 4
+    "order": 4,
+    "email": "donna@openarcollective.org"
   },
   {
     "id": "lucas-brown",
@@ -42,6 +46,7 @@
     "bio": "Managing partner at Saige Analytics, specializing in data analysis and decision science, with responsibility for bringing technical depth to the questions that reach the Board.",
     "photo": "/assets/board/LucasBrown.jpg",
     "linkedin": "https://www.linkedin.com/in/lucas-brown-0961244/",
-    "order": 5
+    "order": 5,
+    "email": "lucas@openarcollective.org"
   }
 ]
