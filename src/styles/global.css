@@ -1,0 +1,232 @@
+/* OpenAR Collective design tokens and base styles */
+
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-serif-display.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('/fonts/dm-sans-variable.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/barlow-semibold.woff2') format('woff2');
+}
+
+:root {
+  --c-bg: #0e0d0b;
+  --c-surface: #161410;
+  --c-text: #f4efe6;
+  --c-text-soft: rgba(244, 239, 230, 0.78);
+  --c-muted: #888070;
+  --c-amber: #e8a020;
+  --c-amber-light: #f5c050;
+  --c-bronze: #b87818;
+  --c-line: rgba(232, 160, 32, 0.14);
+  --f-serif: 'DM Serif Display', Georgia, serif;
+  --f-sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: Consolas, 'Courier New', monospace;
+  --f-wordmark: 'Barlow', var(--f-sans);
+  --w-content: 44rem;
+  --w-wide: 64rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--c-bg);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--f-sans);
+  font-weight: 340;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--f-serif);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--c-text);
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5.5vw, 3.1rem);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+code,
+pre {
+  font-family: var(--f-mono);
+  font-size: 0.92em;
+}
+
+a {
+  color: var(--c-amber);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--c-amber-light);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--c-amber);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 10;
+  background: var(--c-amber);
+  color: var(--c-bg);
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--w-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.prose {
+  max-width: var(--w-content);
+}
+
+.prose p + p {
+  margin-top: 1rem;
+}
+
+.section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--c-line);
+}
+
+.section-alt {
+  background: var(--c-surface);
+}
+
+.overline {
+  font-family: var(--f-sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-amber);
+}
+
+.page-head {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.page-head h1 {
+  margin-top: 0.6rem;
+}
+
+.page-head .lede {
+  margin-top: 1rem;
+  max-width: var(--w-content);
+  color: var(--c-text-soft);
+  font-size: 1.15rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--f-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--c-amber);
+  color: var(--c-bg);
+}
+
+.btn-primary:hover {
+  background: var(--c-amber-light);
+  color: var(--c-bg);
+}
+
+.btn-outline {
+  background: none;
+  border-color: rgba(232, 160, 32, 0.5);
+  color: var(--c-amber);
+}
+
+.btn-outline:hover {
+  border-color: var(--c-amber);
+  color: var(--c-amber-light);
+}
+
+.notice {
+  border: 1px solid var(--c-line);
+  border-left: 3px solid var(--c-amber);
+  background: var(--c-surface);
+  padding: 1.25rem 1.5rem;
+  max-width: var(--w-content);
+}
+
+ul.plain {
+  list-style: none;
+}

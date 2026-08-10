@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+
+const description =
+  'The programs of the OpenAR Collective: open-source software, open knowledge, shared standards, training, and a neutral practitioner community.';
+---
+
+<Base title="Programs" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">Programs</p>
+      <h1>What the Foundation builds and publishes</h1>
+      <p class="lede">
+        Every program is free to access and use. Nothing the Foundation publishes requires
+        membership, payment, or a commercial relationship of any kind.
+      </p>
+    </div>
+
+    <section class="program prose" aria-labelledby="software">
+      <h2 id="software">Open-source software</h2>
+      <p>
+        The Foundation's flagship program is a production-grade accounts receivable and collections
+        platform that any organization can download, run, modify, and redistribute without a vendor
+        relationship, a license fee, or permission from anyone. The software comprises two layers:
+        the Wax application framework, a domain-agnostic foundation for auditable business
+        applications, and the HiveAR accounts receivable platform built on it.
+      </p>
+      <p>
+        The software is released under the Apache License, Version 2.0. Source code is published
+        publicly on <a href="https://github.com/OpenAR-Collective" rel="noopener">GitHub</a>, and
+        outside contributions are accepted under the Developer Certificate of Origin. Compliance is
+        a design principle rather than an add-on: tamper-evident audit trails, fine-grained access
+        controls, and configurable compliance workflows are part of the core architecture.
+      </p>
+      <p>
+        The Foundation is not a software vendor. It stewards the platform on behalf of the industry
+        and the public, and it will never charge for it.
+      </p>
+    </section>
+
+    <section class="program prose" aria-labelledby="knowledge">
+      <h2 id="knowledge">Open knowledge</h2>
+      <p>
+        The Foundation publishes open educational content, including guides, articles, white papers,
+        and recorded webinars, addressing operational and compliance topics in accounts receivable.
+        A library of plain-language compliance resources will cover the FDCPA, the FCRA, Regulation
+        F, and key state-level consumer protection statutes, written to be accessible to
+        practitioners who may lack dedicated legal or compliance staff.
+      </p>
+      <p class="notice">
+        Compliance and regulatory resources published by the Foundation are educational reference
+        materials only. They describe general regulatory frameworks and do not constitute legal
+        advice, create an attorney-client relationship, or address the specific circumstances of any
+        organization. Retain qualified legal counsel for guidance specific to your operations.
+      </p>
+    </section>
+
+    <section class="program prose" aria-labelledby="standards">
+      <h2 id="standards">Shared standards</h2>
+      <p>
+        The Foundation develops shared technical and operational standards for the industry,
+        including integration standards and published naming conventions for community
+        contributions. Standards are developed in the open, with community input, and published
+        freely so any vendor or agency can implement them.
+      </p>
+    </section>
+
+    <section class="program prose" aria-labelledby="training">
+      <h2 id="training">Training</h2>
+      <p>
+        The Foundation delivers training through free webinars and virtual workshops open to the
+        entire community, with recordings archived for asynchronous viewing. As the platform
+        matures, a formal certification and training program will follow for the vendors and
+        professionals who work with it.
+      </p>
+    </section>
+
+    <section class="program prose" aria-labelledby="community">
+      <h2 id="community">Neutral community</h2>
+      <p>
+        The Foundation maintains a peer community, hosted on Discord, that is open to every
+        practitioner in the industry: compliance officers, developers, operations managers,
+        collectors, agency owners, attorneys, consumer advocates, academics, and regulators.
+        Commercial solicitation is prohibited, there are no sponsored channels, and no one can buy
+        visibility. The community is the incubator from which future programs emerge; the direction
+        of those programs will be set by the practitioners who participate.
+      </p>
+      <p>
+        <a href="/join">Join the community</a>
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .program {
+    margin-top: 2.75rem;
+  }
+
+  .program h2 {
+    margin-bottom: 1rem;
+  }
+
+  .notice {
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+    color: var(--c-text-soft);
+  }
+</style>

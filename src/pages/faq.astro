@@ -1,0 +1,134 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+const entries = (await getCollection('faq')).sort((a, b) => a.data.order - b.data.order);
+const sectionOrder = [
+  'The basics',
+  'How this works',
+  'Who this is for',
+  'Why a nonprofit',
+  'The community',
+  'The platform',
+];
+const sections = sectionOrder.map((name) => ({
+  name,
+  slug: name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+  entries: entries.filter((e) => e.data.section === name),
+}));
+
+const rendered = new Map();
+for (const entry of entries) {
+  const { Content } = await render(entry);
+  rendered.set(entry.id, Content);
+}
+
+const description =
+  'Answers to common questions about the OpenAR Collective: what it is, how free open-source software works, who it serves, and why it is a nonprofit.';
+---
+
+<Base title="Frequently Asked Questions" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">FAQ</p>
+      <h1>Frequently asked questions</h1>
+      <p class="lede">
+        Plain answers about the Foundation, the software, and the community. Questions this page
+        does not answer are welcome at <a href="mailto:rob@openarcollective.org">rob@openarcollective.org</a>.
+      </p>
+    </div>
+
+    <nav class="toc" aria-label="FAQ sections">
+      <ul class="plain">
+        {
+          sections.map((s) => (
+            <li>
+              <a href={`#${s.slug}`}>{s.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    {
+      sections.map((s) => (
+        <section class="faq-section" aria-labelledby={s.slug}>
+          <h2 id={s.slug}>{s.name}</h2>
+          {s.entries.map((entry) => {
+            const Content = rendered.get(entry.id);
+            return (
+              <details>
+                <summary>{entry.data.question}</summary>
+                <div class="answer prose">
+                  <Content />
+                </div>
+              </details>
+            );
+          })}
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .toc a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .faq-section {
+    margin-top: 2.5rem;
+    max-width: var(--w-content);
+  }
+
+  .faq-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  details {
+    border: 1px solid var(--c-line);
+    border-radius: 3px;
+    background: var(--c-surface);
+    margin-bottom: 0.6rem;
+  }
+
+  summary {
+    cursor: pointer;
+    padding: 0.9rem 1.1rem;
+    font-weight: 550;
+    line-height: 1.45;
+    list-style-position: outside;
+  }
+
+  summary:hover {
+    color: var(--c-amber-light);
+  }
+
+  details[open] summary {
+    color: var(--c-amber);
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .answer {
+    padding: 1rem 1.25rem 1.25rem;
+    color: var(--c-text-soft);
+    font-size: 0.98rem;
+  }
+
+  .answer :global(ul) {
+    padding-left: 1.4rem;
+    margin: 0.75rem 0;
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+
+const description =
+  'How to reach The Open Accounts Receivable Collective Foundation by email and by mail.';
+---
+
+<Base title="Contact" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">Contact</p>
+      <h1>Reach the Foundation</h1>
+    </div>
+
+    <section class="prose" aria-labelledby="email-heading">
+      <h2 id="email-heading">Email</h2>
+      <ul class="plain addresses">
+        <li>
+          <a href="mailto:rob@openarcollective.org">rob@openarcollective.org</a>
+          <span>General inquiries, media, and sponsorship interest</span>
+        </li>
+        <li>
+          <a href="mailto:opensource@openarcollective.org">opensource@openarcollective.org</a>
+          <span>Questions about the Open Source Policy and contributing</span>
+        </li>
+        <li>
+          <a href="mailto:trademark@openarcollective.org">trademark@openarcollective.org</a>
+          <span>Trademark questions, authorization requests, and misuse reports</span>
+        </li>
+      </ul>
+      <p class="note">
+        The Foundation has not received its federal tax exemption determination and is not currently
+        soliciting contributions. Organizations that want to discuss supporting the Foundation's
+        work in the future are welcome to write to
+        <a href="mailto:rob@openarcollective.org">rob@openarcollective.org</a>.
+      </p>
+    </section>
+
+    <section class="prose section-gap" aria-labelledby="mail-heading">
+      <h2 id="mail-heading">Mail</h2>
+      <address>
+        The Open Accounts Receivable Collective Foundation<br />
+        3000 S Hulen Street, Suite 124-735<br />
+        Fort Worth, TX 76109
+      </address>
+    </section>
+  </div>
+</Base>
+
+<style>
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .section-gap {
+    margin-top: 2.75rem;
+  }
+
+  .addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .addresses li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .addresses span {
+    color: var(--c-muted);
+    font-size: 0.9rem;
+  }
+
+  .note {
+    margin-top: 1.5rem;
+    color: var(--c-text-soft);
+    font-size: 0.95rem;
+  }
+
+  address {
+    font-style: normal;
+    line-height: 1.7;
+    color: var(--c-text-soft);
+  }
+</style>

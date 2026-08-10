@@ -1,0 +1,119 @@
+---
+import HexMark from './HexMark.astro';
+
+const columns = [
+  {
+    title: 'Foundation',
+    links: [
+      { href: '/about', label: 'About' },
+      { href: '/programs', label: 'Programs' },
+      { href: '/faq', label: 'FAQ' },
+      { href: '/policies', label: 'Policies' },
+    ],
+  },
+  {
+    title: 'Participate',
+    links: [
+      { href: '/join', label: 'Join' },
+      { href: '/supporters', label: 'Mission Supporters' },
+      { href: 'https://github.com/OpenAR-Collective', label: 'GitHub' },
+    ],
+  },
+  {
+    title: 'Reference',
+    links: [
+      { href: '/trademark', label: 'Trademarks' },
+      { href: '/report', label: 'Report a Concern' },
+      { href: '/contact', label: 'Contact' },
+    ],
+  },
+];
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="wrap grid">
+    <div class="id">
+      <HexMark size={40} id="hex-foot" />
+      <p class="legal">The Open Accounts Receivable Collective Foundation</p>
+    </div>
+    {
+      columns.map((col) => (
+        <nav aria-label={col.title}>
+          <h2 class="overline">{col.title}</h2>
+          <ul class="plain">
+            {col.links.map((l) => (
+              <li>
+                <a href={l.href}>{l.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))
+    }
+  </div>
+  <div class="wrap fine">
+    <p>
+      &copy; {year} The Open Accounts Receivable Collective Foundation, a Delaware nonprofit
+      corporation seeking recognition of federal tax exemption. Operating as The OpenAR Collective.
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--c-line);
+    background: var(--c-surface);
+    margin-top: 4rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 44rem) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .legal {
+    margin-top: 0.9rem;
+    max-width: 16rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--c-muted);
+  }
+
+  footer nav ul {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  footer nav a {
+    font-size: 0.9rem;
+    color: var(--c-text-soft);
+    text-decoration: none;
+  }
+
+  footer nav a:hover {
+    color: var(--c-amber);
+  }
+
+  .fine {
+    border-top: 1px solid var(--c-line);
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .fine p {
+    font-size: 0.8rem;
+    color: var(--c-muted);
+  }
+</style>

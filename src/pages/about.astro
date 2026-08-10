@@ -1,0 +1,149 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const board = (await getCollection('board')).sort((a, b) => a.data.order - b.data.order);
+
+const description =
+  'How The Open Accounts Receivable Collective Foundation is formed, structured, and governed, and the founding Board of Directors.';
+---
+
+<Base title="About" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">About</p>
+      <h1>A foundation built to be neutral</h1>
+      <p class="lede">
+        The OpenAR Collective exists to give the accounts receivable and debt collection industry
+        shared infrastructure that belongs to the industry itself rather than to any one company.
+      </p>
+    </div>
+
+    <section class="prose" aria-labelledby="formation">
+      <h2 id="formation">Formation</h2>
+      <p>
+        The Open Accounts Receivable Collective Foundation is a Delaware non-stock nonprofit
+        corporation, incorporated April 13, 2026, and headquartered in Fort Worth, Texas. It
+        operates under the trade name The OpenAR Collective. The Foundation is seeking recognition
+        of exemption under Section 501(c)(3) of the Internal Revenue Code and will file Form 1023
+        with the Internal Revenue Service following review by counsel. It is not currently
+        soliciting contributions.
+      </p>
+      <p>
+        The Foundation charges no fees, sells nothing, requires no membership to use its resources,
+        and does not engage in lobbying or political advocacy.
+      </p>
+    </section>
+
+    <section class="prose section-gap" aria-labelledby="governance">
+      <h2 id="governance">Governance built to resist capture</h2>
+      <p>
+        A nonprofit serving a concentrated industry faces a structural risk: that a single funder,
+        vendor, or faction accumulates enough influence to steer the organization toward private
+        interests. The Foundation's answer is structural rather than aspirational, and it was put in
+        place before the organization opened its doors.
+      </p>
+      <p>
+        The bylaws require that independent directors constitute at least two-thirds of the Board at
+        all times, with the founder counted as non-independent for as long as he serves. Directors
+        serve staggered terms across three classes. A written Anti-Capture Policy limits any single
+        employer or commonly controlled group to one affiliated director, sets concentration limits
+        on the share of revenue that may come from any single funder, and bars any funder above a
+        defined threshold from holding or appointing a board seat.
+      </p>
+      <p>
+        The Board has also adopted written policies covering conflicts of interest, anti-nepotism,
+        trademarks, open source licensing, whistleblower protection, document retention and
+        destruction, volunteer and expense reimbursement, gift acceptance, and antitrust compliance.
+        The adopted governance documents are listed on the <a href="/policies">policies page</a>.
+      </p>
+    </section>
+
+    <section class="section-gap" aria-labelledby="board">
+      <h2 id="board">The founding Board</h2>
+      <p class="prose board-intro">
+        The Foundation's five founding directors were seated in July 2026 and elected officers at
+        the Board's organizational meeting. The Board may expand to as many as nine seats. The
+        Foundation intends to fill the remaining seats from people who are actively contributing to
+        the community, drawn from a range of backgrounds and perspectives rather than from a single
+        corner of the industry. Seats are not available through sponsorship or donation.
+      </p>
+      <ul class="plain directors">
+        {
+          board.map((m) => (
+            <li class="director">
+              <img src={m.data.photo} alt={`Portrait of ${m.data.name}`} width="120" height="120" loading="lazy" />
+              <div>
+                <h3>{m.data.name}</h3>
+                <p class="office">{m.data.office}</p>
+                <p class="bio">{m.data.bio}</p>
+                <p class="li">
+                  <a href={m.data.linkedin} rel="noopener">
+                    {m.data.name} on LinkedIn
+                  </a>
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .section-gap {
+    margin-top: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .board-intro {
+    margin-bottom: 2rem;
+  }
+
+  .directors {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    max-width: var(--w-content);
+  }
+
+  .director {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .director img {
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 36rem) {
+    .director {
+      flex-direction: column;
+    }
+  }
+
+  .office {
+    color: var(--c-amber);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0.2rem 0 0.6rem;
+  }
+
+  .bio {
+    color: var(--c-text-soft);
+    font-size: 0.98rem;
+  }
+
+  .li {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+import Base from '../layouts/Base.astro';
+
+// Documents adopted at the Board's organizational phase. Links are added as
+// each adopted document is published; entries without an href render as
+// "publication pending".
+const policies = [
+  { title: 'Open Source Policy', href: null },
+  { title: 'Trademark Policy', href: null },
+  { title: 'Community Programs and Standards Policy', href: null },
+  { title: 'Whistleblower Policy', href: null },
+  { title: 'Conflict of Interest Policy', href: null },
+  { title: 'Anti-Capture Policy', href: null },
+  { title: 'Anti-Nepotism Policy', href: null },
+  { title: 'Document Retention and Destruction Policy', href: null },
+  { title: 'Volunteer and Expense Reimbursement Policy', href: null },
+  { title: 'Gift Acceptance Policy', href: null },
+  { title: 'Antitrust Compliance Policy', href: null },
+];
+
+const description =
+  'The governance policies adopted by the Board of Directors of The Open Accounts Receivable Collective Foundation.';
+---
+
+<Base title="Policies" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">Governance</p>
+      <h1>Policies</h1>
+      <p class="lede">
+        The Foundation operates under a suite of written governance policies adopted by its Board of
+        Directors. The adopted documents are published here as they are finalized for publication.
+      </p>
+    </div>
+
+    <ul class="plain policy-list">
+      {
+        policies.map((p) => (
+          <li>
+            {p.href ? <a href={p.href}>{p.title}</a> : <span>{p.title}</span>}
+            {!p.href && <em>Publication pending</em>}
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="prose note">
+      Questions about the Foundation's governance documents are welcome at
+      <a href="mailto:rob@openarcollective.org">rob@openarcollective.org</a>. Questions specific to
+      the Open Source Policy can go to
+      <a href="mailto:opensource@openarcollective.org">opensource@openarcollective.org</a>, and
+      questions specific to the Trademark Policy to
+      <a href="mailto:trademark@openarcollective.org">trademark@openarcollective.org</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .policy-list {
+    max-width: var(--w-content);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .policy-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border: 1px solid var(--c-line);
+    border-radius: 3px;
+    background: var(--c-surface);
+    padding: 0.85rem 1.2rem;
+  }
+
+  .policy-list em {
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    white-space: nowrap;
+  }
+
+  .note {
+    margin-top: 2rem;
+    color: var(--c-text-soft);
+    font-size: 0.95rem;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+interface Props {
+  size?: number;
+  id?: string;
+}
+const { size = 96, id = 'hex' } = Astro.props;
+const height = Math.round(size * 0.872);
+---
+
+<svg
+  viewBox="46 73 420 366"
+  width={size}
+  height={height}
+  aria-hidden="true"
+  class="hex-mark"
+>
+  <defs>
+    <linearGradient id={id} x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#F5B830"></stop>
+      <stop offset="100%" stop-color="#B87010"></stop>
+    </linearGradient>
+  </defs>
+  <polygon
+    points="456,256 356,429.205 156,429.205 56,256 156,82.795 356,82.795"
+    fill={`url(#${id})`}
+    stroke="#F8D060"
+    stroke-width="9"></polygon>
+</svg>

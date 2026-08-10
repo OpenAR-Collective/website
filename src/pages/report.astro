@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+
+const description =
+  'How to report a concern about the OpenAR Collective under the Foundation Whistleblower Policy, and the protections that apply.';
+---
+
+<Base title="Report a Concern" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">Whistleblower reporting</p>
+      <h1>Report a concern</h1>
+      <p class="lede">
+        The Foundation wants to hear about conduct that may violate the law or a Foundation policy.
+        Reports can come from anyone, including community participants, contributors, contractors,
+        and members of the public.
+      </p>
+    </div>
+
+    <section class="prose" aria-labelledby="protection">
+      <h2 id="protection">The protection</h2>
+      <p>
+        The Foundation's Whistleblower Policy protects people who report concerns. The Foundation
+        prohibits retaliation against any person who makes a report in good faith or who
+        participates in an investigation, and a report made in good faith will never affect your
+        participation in the Foundation's community or programs. The policy will be published on the
+        <a href="/policies">policies page</a>.
+      </p>
+    </section>
+
+    <section class="prose section-gap" aria-labelledby="how">
+      <h2 id="how">How to report</h2>
+      <p>
+        Reports can be sent by email to the Foundation's monitored reporting address, which will be
+        published on this page, or by mail to the Foundation's
+        <a href="/contact">mailing address</a>.
+      </p>
+      <div class="notice" role="note">
+        <p>
+          <strong>Email is not anonymous.</strong> An emailed report identifies your email address
+          to the people who read it. If you need to report anonymously, use postal mail without a
+          return address. The Foundation is working toward an anonymous online reporting channel and
+          will publish it on this page when it is available.
+        </p>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .section-gap {
+    margin-top: 2.75rem;
+  }
+
+  .notice {
+    margin-top: 1.5rem;
+  }
+</style>

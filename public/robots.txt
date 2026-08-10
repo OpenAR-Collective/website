@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://openarcollective.org/sitemap-index.xml
