@@ -137,10 +137,6 @@ button:focus-visible {
   padding: 0 1.5rem;
 }
 
-.prose {
-  max-width: var(--w-content);
-}
-
 .prose p + p {
   margin-top: 1rem;
 }
@@ -173,7 +169,6 @@ button:focus-visible {
 
 .page-head .lede {
   margin-top: 1rem;
-  max-width: var(--w-content);
   color: var(--c-text-soft);
   font-size: 1.15rem;
 }
@@ -217,7 +212,6 @@ button:focus-visible {
   border-left: 3px solid var(--c-amber);
   background: var(--c-surface);
   padding: 1.25rem 1.5rem;
-  max-width: var(--w-content);
 }
 
 ul.plain {
