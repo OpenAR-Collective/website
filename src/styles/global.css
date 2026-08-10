@@ -1,14 +1,6 @@
 /* OpenAR Collective design tokens and base styles */
 
 @font-face {
-  font-family: 'DM Serif Display';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/dm-serif-display.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 100 1000;
@@ -34,10 +26,10 @@
   --c-amber-light: #f5c050;
   --c-bronze: #b87818;
   --c-line: rgba(232, 160, 32, 0.14);
-  --f-serif: 'DM Serif Display', Georgia, serif;
   --f-sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --f-mono: Consolas, 'Courier New', monospace;
-  --f-wordmark: 'Barlow', var(--f-sans);
+  --f-display: 'Barlow', Arial, var(--f-sans);
+  --f-wordmark: var(--f-display);
   --w-content: 44rem;
   --w-wide: 64rem;
 }
@@ -78,8 +70,8 @@ main {
 h1,
 h2,
 h3 {
-  font-family: var(--f-serif);
-  font-weight: 400;
+  font-family: var(--f-display);
+  font-weight: 600;
   line-height: 1.15;
   color: var(--c-text);
 }
