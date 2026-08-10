@@ -1,12 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
 import HexMark from '../components/HexMark.astro';
+import HexGlow from '../components/HexGlow.astro';
 
 const description =
   'The OpenAR Collective provides the accounts receivable and debt collection industry with free open-source software, open educational and compliance resources, and a neutral peer community.';
 ---
 
 <Base title="OpenAR Collective" description={description}>
+  <HexGlow />
   <section class="hero">
     <div class="wrap">
       <HexMark size={120} id="hex-hero" />
