@@ -2,49 +2,62 @@
 import Base from '../layouts/Base.astro';
 
 const description =
-  'The programs of the OpenAR Collective: open-source software, open knowledge, shared standards, training, and a neutral practitioner community.';
+  'The programs the OpenAR Collective is organized to run: open-source software, open knowledge, shared standards, training, and a neutral practitioner community, with the current status of each.';
 ---
 
 <Base title="Programs" description={description}>
   <div class="wrap">
     <div class="page-head">
       <p class="overline">Programs</p>
-      <h1>What the Foundation builds and publishes</h1>
+      <h1>What the Foundation is building</h1>
       <p class="lede">
-        The Foundation's software and published resources are free to access and use. Nothing it
-        publishes requires membership, payment, or a commercial relationship of any kind.
+        Everything the Foundation builds and publishes will be free to use. Nothing it publishes
+        will require membership, payment, or a commercial relationship of any kind.
       </p>
     </div>
 
-    <section class="program prose" aria-labelledby="software">
-      <h2 id="software">Open-source software</h2>
+    <div class="status-note" role="note">
+      <h2>Where things stand</h2>
       <p>
-        The Foundation's flagship program is a production-grade accounts receivable and collections
-        platform that any organization can download, run, modify, and redistribute without a vendor
-        relationship, a license fee, or permission from anyone. The software comprises two layers:
-        the Wax application framework, a domain-agnostic foundation for auditable business
-        applications, and the HiveAR accounts receivable platform built on it.
+        The Foundation was incorporated in April 2026 and seated its founding Board in July. Its
+        work right now is telling the industry it exists and building the community that will shape
+        everything else. The programs below describe what the Foundation is organized to do, not a
+        catalogue of services running today. Each one carries its current status, and this page will
+        be updated as programs launch.
+      </p>
+    </div>
+
+    <section class="program" aria-labelledby="software">
+      <h2 id="software">Open-source software <span class="tag">In design</span></h2>
+      <p>
+        The Foundation's flagship program will be a production-grade accounts receivable and
+        collections platform that any organization can download, run, modify, and redistribute
+        without a vendor relationship, a license fee, or permission from anyone. The software
+        comprises two layers: the Wax application framework, a domain-agnostic foundation for
+        auditable business applications, and the HiveAR accounts receivable platform built on it.
       </p>
       <p>
-        The software is released under the Apache License, Version 2.0. Source code is published
-        publicly on <a href="https://github.com/OpenAR-Collective" rel="noopener">GitHub</a>, and
-        outside contributions are accepted under the Developer Certificate of Origin. Compliance is
-        a design principle rather than an add-on: tamper-evident audit trails, fine-grained access
-        controls, and configurable compliance workflows are part of the core architecture.
+        The platform is in its initial architecture and design phase, and no source has been
+        published yet. It will be released under the Apache License, Version 2.0, with source code
+        published publicly on
+        the <a href="https://github.com/OpenAR-Collective" rel="noopener">GitHub organization</a> and
+        outside contributions accepted under the Developer Certificate of Origin. Compliance is a
+        design principle rather than an add-on: tamper-evident audit trails, fine-grained access
+        controls, and configurable compliance workflows are core architectural commitments.
       </p>
       <p>
-        The Foundation is not a software vendor. It stewards the platform on behalf of the industry
-        and the public, and it will never charge for it.
+        The Foundation is not a software vendor. It will steward the platform on behalf of the
+        industry and the public, and it will never charge for it.
       </p>
     </section>
 
-    <section class="program prose" aria-labelledby="knowledge">
-      <h2 id="knowledge">Open knowledge</h2>
+    <section class="program" aria-labelledby="knowledge">
+      <h2 id="knowledge">Open knowledge <span class="tag">Planned</span></h2>
       <p>
-        The Foundation publishes open educational content, including guides, articles, white papers,
-        and recorded webinars, addressing operational and compliance topics in accounts receivable.
-        A library of plain-language compliance resources will cover the FDCPA, the FCRA, Regulation
-        F, and key state-level consumer protection statutes, written to be accessible to
+        The Foundation will publish open educational content, including guides, articles, white
+        papers, and recorded webinars, addressing operational and compliance topics in accounts
+        receivable. A library of plain-language compliance resources will cover the FDCPA, the FCRA,
+        Regulation F, and key state-level consumer protection statutes, written to be accessible to
         practitioners who may lack dedicated legal or compliance staff.
       </p>
       <p class="notice">
@@ -55,42 +68,46 @@ const description =
       </p>
     </section>
 
-    <section class="program prose" aria-labelledby="standards">
-      <h2 id="standards">Shared standards</h2>
+    <section class="program" aria-labelledby="standards">
+      <h2 id="standards">Shared standards <span class="tag">Planned</span></h2>
       <p>
-        The Foundation develops shared technical and operational standards for the industry,
+        The Foundation will develop shared technical and operational standards for the industry,
         including integration standards and published naming conventions for community
-        contributions. Standards are developed in the open, with community input, and published
+        contributions. Standards will be developed in the open, with community input, and published
         freely so any vendor or agency can implement them.
       </p>
     </section>
 
-    <section class="program prose" aria-labelledby="training">
-      <h2 id="training">Training</h2>
+    <section class="program" aria-labelledby="training">
+      <h2 id="training">Training <span class="tag">Planned</span></h2>
       <p>
-        The Foundation delivers training through free webinars and virtual workshops open to the
+        The Foundation will deliver training through free webinars and virtual workshops open to the
         entire community, with recordings archived for asynchronous viewing. As the platform
         matures, a formal certification and training program will follow for the vendors and
         professionals who work with it.
       </p>
       <p>
         Certification examinations, courses, and renewals may carry fees, which support the
-        Foundation's programs. Fees and standards are uniform across applicants, and no applicant
-        receives preferential treatment based on a relationship to the Foundation, its leadership,
-        or its directors. Certification never gates the software: the platform is open source, and
-        anyone may run, modify, and build on it without certification of any kind.
+        Foundation's programs. Fees and standards will be uniform across applicants, and no
+        applicant will receive preferential treatment based on a relationship to the Foundation, its
+        leadership, or its directors. Certification will never gate the software: the platform is
+        open source, and anyone may run, modify, and build on it without certification of any kind.
       </p>
     </section>
 
-    <section class="program prose" aria-labelledby="community">
-      <h2 id="community">Neutral community</h2>
+    <section class="program" aria-labelledby="community">
+      <h2 id="community">Neutral community <span class="tag tag-live">Open now</span></h2>
       <p>
         The Foundation maintains a peer community, hosted on Discord, that is open to every
         practitioner in the industry: compliance officers, developers, operations managers,
         collectors, agency owners, attorneys, consumer advocates, academics, and regulators.
         Commercial solicitation is prohibited, there are no sponsored channels, and no one can buy
-        visibility. The community is the incubator from which future programs emerge; the direction
-        of those programs will be set by the practitioners who participate.
+        visibility.
+      </p>
+      <p>
+        This is where the Foundation's work starts. The community is the incubator from which the
+        other programs emerge, and the direction those programs take will be set by the
+        practitioners who participate. Joining now means helping decide what gets built first.
       </p>
       <p>
         <a href="/join">Join the community</a>
@@ -100,17 +117,63 @@ const description =
 </Base>
 
 <style>
+  .status-note {
+    border: 1px solid var(--c-line);
+    border-left: 3px solid var(--c-amber);
+    border-radius: 3px;
+    background: rgba(22, 20, 16, 0.5);
+    padding: 1.35rem 1.6rem 1.5rem;
+  }
+
+  .status-note h2 {
+    font-size: 1.15rem;
+  }
+
+  .status-note p {
+    margin-top: 0.6rem;
+    color: var(--c-text-soft);
+    font-size: 0.98rem;
+  }
+
   .program {
     margin-top: 2.75rem;
   }
 
   .program h2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-bottom: 1rem;
+  }
+
+  /* Status of each program, so the page never reads as a menu of things that
+     are already running. */
+  .tag {
+    font-family: var(--f-sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    border: 1px solid var(--c-line);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    white-space: nowrap;
+  }
+
+  .tag-live {
+    color: var(--c-amber);
+    border-color: rgba(232, 160, 32, 0.45);
+  }
+
+  .program p {
+    margin-bottom: 1rem;
+    color: var(--c-text-soft);
   }
 
   .notice {
     margin-top: 1.25rem;
     font-size: 0.95rem;
-    color: var(--c-text-soft);
   }
 </style>
