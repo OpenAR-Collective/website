@@ -1,0 +1,124 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const policies = (await getCollection('policies')).sort((a, b) => a.data.order - b.data.order);
+
+const categoryOrder = [
+  'Governing document',
+  'Board and organizational governance',
+  'Programs, community, and intellectual property',
+];
+const groups = categoryOrder.map((name) => ({
+  name,
+  entries: policies.filter((p) => p.data.category === name),
+}));
+
+const adopted = policies[0]?.data.adopted.toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+
+const description =
+  'The bylaws and governance policies adopted by the Board of Directors of The Open Accounts Receivable Collective Foundation.';
+---
+
+<Base title="Policies" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">Governance</p>
+      <h1>Bylaws and policies</h1>
+      <p class="lede">
+        The Foundation operates under a written governing document and a suite of governance
+        policies, all adopted by its Board of Directors on {adopted} and published here in full.
+      </p>
+    </div>
+
+    {
+      groups.map((group) => (
+        <section class="group" aria-labelledby={group.name.replace(/[^a-z]+/gi, '-').toLowerCase()}>
+          <h2 id={group.name.replace(/[^a-z]+/gi, '-').toLowerCase()} class="overline group-head">
+            {group.name}
+          </h2>
+          <ul class="plain policy-list">
+            {group.entries.map((p) => (
+              <li>
+                <a href={`/policies/${p.id}/`}>
+                  <h3>{p.data.title}</h3>
+                  <p>{p.data.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+
+    <p class="note">
+      Questions about the Foundation's governance documents are welcome
+      at <a href="mailto:info@openarcollective.org">info@openarcollective.org</a>. Questions
+      specific to the Open Source Policy can go
+      to <a href="mailto:opensource@openarcollective.org">opensource@openarcollective.org</a>, and
+      questions specific to the Trademark Policy
+      to <a href="mailto:trademark@openarcollective.org">trademark@openarcollective.org</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .group {
+    margin-bottom: 2.5rem;
+  }
+
+  .group-head {
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .policy-list {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+    gap: 1rem;
+  }
+
+  .policy-list a {
+    display: block;
+    height: 100%;
+    border: 1px solid var(--c-line);
+    border-radius: 3px;
+    background: rgba(22, 20, 16, 0.5);
+    padding: 1.1rem 1.35rem 1.25rem;
+    text-decoration: none;
+  }
+
+  .policy-list a:hover {
+    border-color: rgba(232, 160, 32, 0.45);
+  }
+
+  .policy-list h3 {
+    font-size: 1.1rem;
+    color: var(--c-text);
+  }
+
+  .policy-list a:hover h3 {
+    color: var(--c-amber-light);
+  }
+
+  .policy-list p {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--c-text-soft);
+  }
+
+  .note {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--c-line);
+    color: var(--c-text-soft);
+    font-size: 0.95rem;
+  }
+</style>
