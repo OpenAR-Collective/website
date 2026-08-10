@@ -6,18 +6,26 @@ Static site built with [Astro](https://astro.build), deployed to Cloudflare Page
 
 ## Status
 
-Initial setup. The site scaffold and content are in progress.
+Holding page live. The full site is in progress.
+
+## Development
+
+```
+npm install
+npm run dev      # local dev server
+npm run build    # static build to dist/
+```
+
+Deployment is automatic: pushes to `main` are built and published by Cloudflare Pages.
 
 ## Licensing
 
-This repository will use a split licensing model:
+This repository uses a split licensing model:
 
-- **Code** (components, configuration, styles, scripts): Apache License 2.0.
-- **Content** (page copy, FAQ entries, files under `src/content`): Creative Commons Attribution 4.0 International.
-- **Brand assets** (the hex icon, wordmark, and other visual identity elements): not open licensed. Their use is governed by the Foundation's Trademark Policy.
-
-License files will be added as the corresponding materials land in the repository.
+- **Code** (components, configuration, styles, scripts): Apache License 2.0. See [LICENSE](LICENSE).
+- **Content** (page copy, FAQ entries, files under `src/content`): Creative Commons Attribution 4.0 International. See [LICENSE-CONTENT](LICENSE-CONTENT).
+- **Brand assets** (the hex icon, wordmark, favicon set, and other visual identity elements): **not** open licensed. Their use is governed by the Foundation's Trademark Policy. See [public/assets/brand/README.md](public/assets/brand/README.md).
 
 ## Contributing
 
-Contributions are accepted under the Developer Certificate of Origin, Version 1.1. A `CONTRIBUTING.md` with sign-off requirements is forthcoming.
+Contributions are accepted under the Developer Certificate of Origin, Version 1.1, with a `Signed-off-by` trailer on every commit. See [CONTRIBUTING.md](CONTRIBUTING.md).

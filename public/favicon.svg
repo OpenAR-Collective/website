@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <style>
+    .bg-d {display:block} .bg-l {display:none}
+    @media (prefers-color-scheme: light) {
+      .bg-d {display:none} .bg-l {display:block}
+    }
+  </style>
+  <!-- Dark variant -->
+  <g class="bg-d">
+    <rect width="512" height="512" fill="#0E0D0B"/>
+    <defs><linearGradient id="og" x1="20%" y1="0%" x2="80%" y2="100%"><stop offset="0%" stop-color="#F5B830"/><stop offset="100%" stop-color="#B87010"/></linearGradient></defs><polygon points="456.000,256.000 356.000,429.205 156.000,429.205 56.000,256.000 156.000,82.795 356.000,82.795" fill="url(#og)" stroke="#F8D060" stroke-width="10"/>
+  </g>
+  <!-- Light variant -->
+  <g class="bg-l">
+    <rect width="512" height="512" fill="#F5F0E8"/>
+    <defs><linearGradient id="og" x1="20%" y1="0%" x2="80%" y2="100%"><stop offset="0%" stop-color="#F5B830"/><stop offset="100%" stop-color="#B87010"/></linearGradient></defs><polygon points="456.000,256.000 356.000,429.205 156.000,429.205 56.000,256.000 156.000,82.795 356.000,82.795" fill="url(#og)" stroke="#F8D060" stroke-width="10"/>
+  </g>
+</svg>
