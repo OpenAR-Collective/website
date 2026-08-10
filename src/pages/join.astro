@@ -121,15 +121,41 @@ const description =
         </li>
       </ol>
 
+      <div class="expect">
+        <h3 id="what-members-agree-to">What members agree to</h3>
+        <ul class="plain rules">
+          <li>
+            <strong>Real names.</strong> Your community nickname is set to match your application,
+            and only a moderator can change it. Practitioners speak more frankly when they know who
+            is in the room, and that is what the verification step protects.
+          </li>
+          <li>
+            <strong>No consumer information.</strong> Never share a consumer's personal or account
+            information in a Foundation space, whether or not you believe it has been anonymized.
+            The same applies to any data, code, documentation, or examples you contribute.
+          </li>
+          <li>
+            <strong>Antitrust.</strong> Many members compete with one another. Foundation spaces are
+            not used to discuss or agree on prices, fees, rates, terms of service, allocation of
+            markets or customers, or refusal to deal with any business. If a discussion approaches
+            those subjects, end your participation in it and notify a moderator. The
+            full <a href="/policies/antitrust/">Antitrust Policy</a> sets out the detail.
+          </li>
+          <li>
+            <strong>No soliciting.</strong> Vendors are welcome as practitioners. Commercial
+            solicitation is not permitted, there are no sponsored channels, and no one can buy
+            visibility.
+          </li>
+        </ul>
+        <p class="expect-foot">
+          Good-faith criticism of the Foundation, its board, its software, its published positions,
+          or its governance is never a violation of these standards, and it will never affect your
+          participation. The complete terms are in
+          the <a href="/policies/community-programs-and-standards/">Community Programs and Standards Policy</a>.
+        </p>
+      </div>
+
       <div class="notes">
-        <div>
-          <h3>The community uses real names</h3>
-          <p>
-            Your server nickname is set to match your application, and only a moderator can change
-            it. Practitioners speak more frankly when they know who is in the room, and that is what
-            the verification step protects.
-          </p>
-        </div>
         <div>
           <h3>New to Discord?</h3>
           <p>
@@ -254,14 +280,55 @@ const description =
     color: var(--c-text-soft);
   }
 
-  .notes {
+  /* The obligations panel reads as one block of terms rather than a row of
+     cards, so it does not compete with the numbered steps above it. */
+  .expect {
     margin-top: 2.5rem;
+    border: 1px solid var(--c-line);
+    border-left: 3px solid var(--c-amber);
+    border-radius: 3px;
+    background: rgba(22, 20, 16, 0.5);
+    padding: 1.5rem 1.75rem 1.6rem;
+  }
+
+  .expect h3 {
+    font-size: 1.1rem;
+  }
+
+  .rules {
+    margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+  }
+
+  .rules li {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--c-text-soft);
+  }
+
+  .rules strong {
+    color: var(--c-text);
+    font-weight: 600;
+  }
+
+  .expect-foot {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--c-line);
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--c-muted);
+  }
+
+  .notes {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 
-  @media (max-width: 56rem) {
+  @media (max-width: 46rem) {
     .notes {
       grid-template-columns: 1fr;
     }
