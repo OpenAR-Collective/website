@@ -5,9 +5,10 @@ writes one JSON file per organization into src/content/supporters/. Files for
 organizations no longer in the group are removed, which is how a withdrawal
 reaches the website.
 
-The script only touches the working tree. It never commits, pushes, or deploys,
-so a human always sees the diff before anything an organization typed appears on
-openarcollective.org.
+The script only touches the working tree. Committing and deploying is the job of
+.github/workflows/sync-supporters.yml, which runs this on a schedule so an
+approved organization reaches the roster with no further step. The human check
+happens earlier, when a reviewer adds the organization to the published group.
 
 Usage:
     python scripts/sync-supporters.py --dry-run
@@ -17,8 +18,9 @@ Configuration comes from the environment, never from the repository:
 
     CIVI_BASE_URL   e.g. https://join.openarcollective.org
     CIVI_API_KEY    the CiviCRM contact's API key
-    CIVI_SITE_KEY   the site key from civicrm.settings.php
-    CIVI_GROUP      group title, defaults to "Mission Supporters - published"
+    CIVI_SITE_KEY   the site key from civicrm.settings.php, sent as X-Civi-Key
+                    because authx_guards includes site_key on this install
+    CIVI_GROUP      group name or title, defaults to "supporters_published"
 
 Offline testing:
 
@@ -42,7 +44,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "src/content/supporters"
-DEFAULT_GROUP = "Mission Supporters - published"
+DEFAULT_GROUP = "supporters_published"
+USER_AGENT = "OpenAR-roster-sync/1.0 (+https://openarcollective.org)"
 
 # Astro's content layer keeps a persistent store here. Deleting a source file
 # does not evict its entry, so a withdrawn organization would still render in a
@@ -64,16 +67,11 @@ def slugify(value: str) -> str:
     return slug or "supporter"
 
 
-def fetch_contacts() -> list[dict]:
-    """Return the organization records in the published group."""
-    fixture = os.environ.get("CIVI_FIXTURE")
-    if fixture:
-        return json.loads(Path(fixture).read_text(encoding="utf-8"))
-
+def call_api4(entity: str, action: str, params: dict) -> list[dict]:
+    """Call the CiviCRM API4 AJAX endpoint and return the values."""
     base = os.environ.get("CIVI_BASE_URL")
     api_key = os.environ.get("CIVI_API_KEY")
     site_key = os.environ.get("CIVI_SITE_KEY")
-    group = os.environ.get("CIVI_GROUP", DEFAULT_GROUP)
     missing = [
         name
         for name, value in (
@@ -89,25 +87,23 @@ def fetch_contacts() -> list[dict]:
             "\nSet them, or use CIVI_FIXTURE to run offline."
         )
 
-    params = {
-        "select": [
-            "organization_name",
-            "display_name",
-            "MissionSupporter.trade_name",
-            "MissionSupporter.website_url",
-        ],
-        "where": [["groups", "IN", [group]], ["is_deleted", "=", False]],
-        "limit": 0,
-    }
-    url = base.rstrip("/") + "/civicrm/ajax/api4/Contact/get"
+    url = f"{base.rstrip('/')}/civicrm/ajax/api4/{entity}/{action}"
     data = urllib.parse.urlencode({"params": json.dumps(params)}).encode()
     request = urllib.request.Request(
         url,
         data=data,
         headers={
+            # X-Civi-Auth is authx's "xheader" flow, which accepts an API key.
             "X-Civi-Auth": f"Bearer {api_key}",
+            # authx_guards includes site_key on this install, so the request is
+            # refused without this even when the API key itself is valid.
+            "X-Civi-Key": site_key,
             "X-Requested-With": "XMLHttpRequest",
             "Content-Type": "application/x-www-form-urlencoded",
+            # Cloudflare sits in front of join.openarcollective.org and blocks
+            # urllib's default agent outright, with its own 403 before the
+            # request ever reaches CiviCRM.
+            "User-Agent": USER_AGENT,
         },
     )
     try:
@@ -121,6 +117,45 @@ def fetch_contacts() -> list[dict]:
     if "values" not in payload:
         raise SyncError(f"unexpected API response: {json.dumps(payload)[:400]}")
     return payload["values"]
+
+
+def fetch_group_id(group: str) -> int:
+    """Resolve a group name or title to its id.
+
+    Filtering contacts by ["groups", "IN", ["some title"]] is a DB syntax error;
+    the pseudo-field only accepts ids. Resolving here keeps the configuration
+    readable while sending CiviCRM something it can actually use.
+    """
+    values = call_api4("Group", "get", {
+        "select": ["id", "name", "title"],
+        "where": [["OR", [["name", "=", group], ["title", "=", group]]]],
+        "limit": 2,
+    })
+    if not values:
+        raise SyncError(f"no CiviCRM group named or titled {group!r}")
+    if len(values) > 1:
+        found = ", ".join(f"#{v['id']} {v['name']}" for v in values)
+        raise SyncError(f"{group!r} matches more than one group: {found}")
+    return int(values[0]["id"])
+
+
+def fetch_contacts() -> list[dict]:
+    """Return the organization records in the published group."""
+    fixture = os.environ.get("CIVI_FIXTURE")
+    if fixture:
+        return json.loads(Path(fixture).read_text(encoding="utf-8"))
+
+    group = os.environ.get("CIVI_GROUP", DEFAULT_GROUP)
+    return call_api4("Contact", "get", {
+        "select": [
+            "organization_name",
+            "display_name",
+            "MissionSupporter.trade_name",
+            "MissionSupporter.website_url",
+        ],
+        "where": [["groups", "IN", [fetch_group_id(group)]], ["is_deleted", "=", False]],
+        "limit": 0,
+    })
 
 
 def first_value(contact: dict, *keys: str) -> str:
