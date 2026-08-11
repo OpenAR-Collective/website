@@ -90,9 +90,13 @@ def fetch_contacts() -> list[dict]:
         )
 
     params = {
-        "select": ["organization_name", "display_name", "website.url", "Supporter.logo"],
+        "select": [
+            "organization_name",
+            "display_name",
+            "MissionSupporter.trade_name",
+            "MissionSupporter.website_url",
+        ],
         "where": [["groups", "IN", [group]], ["is_deleted", "=", False]],
-        "join": [["Website AS website", "LEFT"]],
         "limit": 0,
     }
     url = base.rstrip("/") + "/civicrm/ajax/api4/Contact/get"
@@ -119,23 +123,54 @@ def fetch_contacts() -> list[dict]:
     return payload["values"]
 
 
+def first_value(contact: dict, *keys: str) -> str:
+    """Return the first non-empty value among keys, stripped."""
+    for key in keys:
+        value = contact.get(key)
+        if value:
+            return str(value).strip()
+    return ""
+
+
+def carried_logo(path: Path) -> dict:
+    """Return the logo already recorded in an entry file, if it has one.
+
+    Logos reach the Foundation by email rather than through the form, so
+    CiviCRM holds none and the entry file is the only copy. Without this, every
+    sync would overwrite a hand-added logo away.
+    """
+    if not path.exists():
+        return {}
+    try:
+        current = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    logo = current.get("logo")
+    return {"logo": logo} if isinstance(logo, str) and logo.strip() else {}
+
+
 def to_entry(contact: dict) -> dict | None:
     """Map one CiviCRM record to a content collection entry, or None to skip."""
-    name = (contact.get("organization_name") or contact.get("display_name") or "").strip()
+    # The roster lists an organization under the name it trades as. The legal
+    # name is what the Statement is signed in, and it stands in when the
+    # organization gave no trade name.
+    name = first_value(
+        contact,
+        "MissionSupporter.trade_name",
+        "trade_name",
+        "organization_name",
+        "display_name",
+    )
     if not name:
         return None
 
     entry = {"name": name}
 
-    website = (contact.get("website.url") or contact.get("website") or "").strip()
+    website = first_value(contact, "MissionSupporter.website_url", "website")
     if website:
         if not website.startswith(("http://", "https://")):
             website = "https://" + website
         entry["website"] = website
-
-    logo = (contact.get("Supporter.logo") or contact.get("logo") or "").strip()
-    if logo:
-        entry["logo"] = logo
 
     return {k: v for k, v in entry.items() if k in SCHEMA_FIELDS}
 
@@ -185,6 +220,7 @@ def main() -> int:
     added, changed = [], []
     for slug, entry in sorted(wanted.items()):
         path = OUT_DIR / f"{slug}.json"
+        entry = {**entry, **carried_logo(path)}
         body = json.dumps(entry, indent=2, ensure_ascii=False) + "\n"
         if not path.exists():
             added.append(slug)
@@ -207,7 +243,7 @@ def main() -> int:
     prefix = "would " if args.dry_run else ""
     print(f"{len(contacts)} record(s) from CiviCRM, {len(entries)} publishable")
     if skipped:
-        print(f"  skipped {skipped} with no organization name")
+        print(f"  skipped {skipped} with no usable name")
     print(f"  {prefix}add:    {', '.join(added) or 'none'}")
     print(f"  {prefix}update: {', '.join(changed) or 'none'}")
     print(f"  {prefix}remove: {', '.join(p.stem for p in stale) or 'none'}")
