@@ -81,7 +81,11 @@ const description =
     src: url('/fonts/barlow-light.woff2') format('woff2');
   }
 
-  * {
+  /* Astro scopes a bare `*` to [data-astro-cid-...], an attribute selector that
+     outranks the unscoped `body` rule below and cancelled its side padding, so
+     the text sat flush against both edges of a phone screen. :global keeps the
+     reset at zero specificity, where a reset belongs. */
+  :global(*) {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
