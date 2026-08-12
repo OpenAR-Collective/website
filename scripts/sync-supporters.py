@@ -55,7 +55,7 @@ ASTRO_STORE = ROOT / "node_modules/.astro/data-store.json"
 
 # Fields the supporters content collection accepts. Anything else is dropped
 # rather than written, so a stray CiviCRM field cannot break the site build.
-SCHEMA_FIELDS = ("name", "website", "logo")
+SCHEMA_FIELDS = ("name", "website")
 
 
 class SyncError(Exception):
@@ -167,23 +167,6 @@ def first_value(contact: dict, *keys: str) -> str:
     return ""
 
 
-def carried_logo(path: Path) -> dict:
-    """Return the logo already recorded in an entry file, if it has one.
-
-    Logos reach the Foundation by email rather than through the form, so
-    CiviCRM holds none and the entry file is the only copy. Without this, every
-    sync would overwrite a hand-added logo away.
-    """
-    if not path.exists():
-        return {}
-    try:
-        current = json.loads(path.read_text(encoding="utf-8"))
-    except (json.JSONDecodeError, OSError):
-        return {}
-    logo = current.get("logo")
-    return {"logo": logo} if isinstance(logo, str) and logo.strip() else {}
-
-
 def to_entry(contact: dict) -> dict | None:
     """Map one CiviCRM record to a content collection entry, or None to skip."""
     # The roster lists an organization under the name it trades as. The legal
@@ -255,7 +238,6 @@ def main() -> int:
     added, changed = [], []
     for slug, entry in sorted(wanted.items()):
         path = OUT_DIR / f"{slug}.json"
-        entry = {**entry, **carried_logo(path)}
         body = json.dumps(entry, indent=2, ensure_ascii=False) + "\n"
         if not path.exists():
             added.append(slug)

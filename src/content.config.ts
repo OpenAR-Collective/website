@@ -16,7 +16,6 @@ const supporters = defineCollection({
   schema: z.object({
     name: z.string(),
     website: z.string().url().optional(),
-    logo: z.string().optional(),
   }),
 });
 

@@ -42,9 +42,6 @@ const description =
         <ul class="plain roster">
           {supporters.map((s) => (
             <li>
-              {s.data.logo && (
-                <img src={s.data.logo} alt="" width="48" height="48" loading="lazy" />
-              )}
               {s.data.website ? (
                 <a href={s.data.website} rel="noopener">
                   {s.data.name}
