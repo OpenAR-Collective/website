@@ -50,7 +50,7 @@ An applicant for membership will provide the applicant's name, email address, pr
 
 ### Section 3.3. Verification and Admission
 
-The Program Administrator will review each application and verify the applicant's identity and professional engagement through procedures established under this policy, which may include confirmation of the applicant's email address and review of the stated employer or affiliation. Admission is complete upon verification. Any material misrepresentation in an application is grounds for denial of the application or, if discovered after admission, for revocation of membership under Article VII.
+The Program Administrator will review each application and verify the applicant's identity and professional engagement through procedures established under this policy, which may include confirmation of the applicant's email address and review of the stated employer or affiliation. Admission is complete upon verification. Any material misrepresentation in an application is grounds for denial of the application or, if discovered after admission, for revocation of membership under Article VII. Where an application is denied, the Program Administrator will provide the applicant written notice of the denial and its basis, and the applicant may appeal under Section 7.6.
 
 ### Section 3.4. Member Numbers
 
@@ -98,7 +98,7 @@ Participation confers no membership on any individual.
 
 Participation is open to any organization that supports the Foundation's charitable mission and is willing to state that support publicly. An organization participates by having an individual with authority to bind the organization execute the Mission Supporter Statement of Support on its behalf, identifying that individual by name, title, and business email address. An organization will notify the Foundation when its authorized representative changes, and the Foundation may request confirmation of continued participation from a successor representative.
 
-The Program Administrator will review each executed Statement of Support, confirm that the signatory organization and its representative are identifiable and that the Statement is complete, and record the organization in the roster. Admission is complete upon that recording. The Foundation may decline to admit an organization that it is unable to identify, that submits an incomplete Statement, or whose participation would be unlawful.
+The Program Administrator will review each executed Statement of Support, confirm that the signatory organization and its representative are identifiable and that the Statement is complete, and record the organization in the roster. Admission is complete upon that recording. The Foundation may decline to admit an organization that it is unable to identify, that submits an incomplete Statement, or whose participation would be unlawful. Where the Foundation declines to admit an organization, the Program Administrator will provide the organization written notice of the decision and its basis, and the organization may appeal under Section 7.6.
 
 ### Section 4.4. Effective Version
 
@@ -196,7 +196,11 @@ Action against an individual member does not affect the participation of that in
 
 ### Section 7.6. Appeal
 
-A member or an organization may appeal a suspension or revocation by written submission to the Board of Directors within thirty (30) days of the notice of the action. The Board, or a committee the Board designates, will decide the appeal within a reasonable time, and its decision is final. Any director who took or directed the action under appeal will not vote on the appeal.
+An applicant whose application for membership has been denied, an organization whose Statement of Support the Foundation has declined to admit, a member whose membership has been suspended or revoked, and an organization whose participation has been revoked may each appeal by written submission to the Board of Directors within thirty (30) days of the notice of the decision.
+
+The Board, or a committee the Board designates, will decide the appeal within a reasonable time, and its decision is final. Any director who made, took, or directed the decision under appeal will not vote on the appeal. One appeal is available from any decision under this policy, and the decision on appeal concludes the matter.
+
+Nothing in this Section limits the right of an applicant or organization whose application has been denied to submit a new application at any time, or limits the readmission provisions of Section 7.7 following a revocation.
 
 ### Section 7.7. Effect and Readmission
 
