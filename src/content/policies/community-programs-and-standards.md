@@ -106,9 +106,9 @@ Each executed Statement of Support binds the signatory organization to the versi
 
 ### Section 4.5. The Roster
 
-The Foundation will publish a roster of participating organizations on its website, identifying each organization by name, and may include the organization's logo and a link to the organization's website where the organization has provided them.
+The Foundation will publish a roster of participating organizations on its website, identifying each organization by name and, where the organization has provided one, linking to the organization's website. The roster is a plain list of names. The Foundation does not display organization logos, marks, taglines, product names, or promotional material on the roster.
 
-All participating organizations will appear on the roster on identical terms. The roster will be presented in alphabetical order, will not be divided into tiers or levels, will not indicate the date of admission as a mark of standing, and will not indicate whether an organization has made any financial contribution to the Foundation.
+All participating organizations will appear on the roster on identical terms. The roster will be presented in alphabetical order, will not be divided into tiers or levels, will not indicate the date of admission as a mark of standing, and will not indicate whether an organization has made any financial contribution to the Foundation. Each organization appears in the same form as every other, with no variation in size, placement, styling, or prominence.
 
 Wherever the roster is published, the Foundation will state that listing reflects the organization's own statement of support, that listing is not a review, approval, or endorsement by the Foundation, and that participating organizations make no financial contribution to the Foundation.
 
