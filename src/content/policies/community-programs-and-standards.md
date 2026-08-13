@@ -42,7 +42,7 @@ The Community Participation Terms in Appendix A will be reproduced in full on th
 
 ### Section 3.1. Eligibility
 
-Membership is open to any individual who is professionally engaged with the accounts receivable industry or who supports the Foundation's charitable purposes, and who makes the affirmation required by Article II, subject to the admission and verification procedures in this Article.
+Membership is open to any individual who is professionally engaged with the accounts receivable industry or who supports the Foundation's charitable purposes, and who makes the affirmation required by Article II, subject to the admission and verification procedures in this Article. Membership does not require that the individual's employer or any other organization participate in the Mission Supporter program, and the Foundation will not condition admission on the participation of any organization.
 
 ### Section 3.2. Application
 
@@ -92,11 +92,11 @@ Participation is not a recognition, review, approval, certification, endorsement
 
 Participation is separate and independent from the Foundation's sponsorship program. Participation is not a sponsor recognition tier, and will not be offered, described, or bundled as a benefit of any sponsorship tier. An organization may participate in both programs, and the Foundation will administer and publish each program independently of the other.
 
-Participation confers no membership on any individual.
+The Mission Supporter program and the recognition membership program are independent in both directions. Participation confers no membership on any individual, and no individual employed by or affiliated with a participating organization is required to be, become, or remain a member. An individual's membership confers no participation on that individual's employer, and no organization is required to participate because any of its personnel are members.
 
 ### Section 4.3. Eligibility and Admission
 
-Participation is open to any organization that supports the Foundation's charitable mission and is willing to state that support publicly. An organization participates by having an individual with authority to bind the organization execute the Mission Supporter Statement of Support on its behalf, identifying that individual by name, title, and business email address. An organization will notify the Foundation when its authorized representative changes, and the Foundation may request confirmation of continued participation from a successor representative.
+Participation is open to any organization that supports the Foundation's charitable mission and is willing to state that support publicly. Participation does not require that any individual employed by or affiliated with the organization be, become, or remain a member of the Foundation's recognition membership program, and the Foundation will not condition admission on the membership of any individual. An organization participates by having an individual with authority to bind the organization execute the Mission Supporter Statement of Support on its behalf, identifying that individual by name, title, and business email address. An organization will notify the Foundation when its authorized representative changes, and the Foundation may request confirmation of continued participation from a successor representative.
 
 The Program Administrator will review each executed Statement of Support, confirm that the signatory organization and its representative are identifiable and that the Statement is complete, and record the organization in the roster. Admission is complete upon that recording. The Foundation may decline to admit an organization that it is unable to identify, that submits an incomplete Statement, or whose participation would be unlawful. Where the Foundation declines to admit an organization, the Program Administrator will provide the organization written notice of the decision and its basis, and the organization may appeal under Section 7.6.
 
@@ -213,3 +213,37 @@ The Foundation will retain each executed Membership Application and Statement of
 ## ARTICLE VIII: POLICY ADMINISTRATION AND REVIEW
 
 The Program Administrator designated by the Board of Directors is responsible for administering this policy, maintaining the roster, and overseeing the community platforms. The Secretary will maintain the member register. This policy may be updated by the Board of Directors and will be reviewed at least annually. Substantive changes will be announced through the Foundation's official channels and reflected in the dated version of this policy. The current version of this policy supersedes any prior version, including the Membership Program and Community Standards Policy and the Mission Supporter Program Policy, each of which this policy replaces in its entirety.
+
+## APPENDIX A: COMMUNITY PARTICIPATION TERMS
+
+These Terms are reproduced in full on the Membership Application and on the Mission Supporter Statement of Support, and are agreed to as a condition of admission to either program. In these Terms, "you" means the individual applicant or the participating organization, as applicable, and "the Foundation" means The Open Accounts Receivable Collective Foundation, operating as The OpenAR Collective.
+
+**1. What participation is not.** Participation gives you no vote, no governance authority, no right to direct or approve the Foundation's activities, positions, software, or standards, no right to notice of or attendance at meetings of the Board of Directors or its committees, and no ownership, financial, or property interest in the Foundation or its assets. Participation is not membership within the meaning of the Delaware General Corporation Law.
+
+**2. No payment, ever.** Participation requires no dues, fees, sponsorship, donation, or financial contribution of any kind. No contribution to the Foundation will confer participation, standing, priority, or any preference of any kind.
+
+**3. No endorsement in either direction.** The Foundation does not review, evaluate, certify, approve, or endorse you, your employer, or any organization's products, services, or business practices, and makes no representation about them. You will not state or imply otherwise.
+
+**4. Antitrust.** Foundation community spaces and events may not be used to discuss or reach any agreement or understanding among competitors concerning prices, fees, rates, terms of service, allocation of markets or customers, or refusal to deal with any business. If a discussion approaches these subjects, you will end your participation in it and notify a moderator or the Foundation. This obligation applies regardless of whether the discussion occurs in a Foundation space, and you will not use your participation as an occasion for such a discussion elsewhere.
+
+**5. Consumer privacy.** You will not share any consumer's personal or account information in any Foundation community space or with the Foundation, whether or not you believe the information has been anonymized. If you contribute data, code, documentation, or examples, you are responsible for ensuring they contain no consumer information.
+
+**6. Confidential and competitively sensitive information.** You will not disclose to the Foundation or its community any information you are not free to disclose, including your employer's confidential information, information subject to a client contract or nondisclosure agreement, and information subject to legal privilege.
+
+**7. Reporting concerns, and no retaliation.** If you believe in good faith that the Foundation, or any person acting on its behalf, has violated the law or a Foundation policy, you may report it under the Foundation's Whistleblower Policy, including anonymously. The Foundation prohibits retaliation against any person who makes such a report in good faith or who participates in an investigation, and will not suspend, revoke, or otherwise act against your participation because you made such a report. Reports made in bad faith, or with knowledge that the reported information is false, are not protected.
+
+**8. Nothing here is legal or compliance advice.** The Foundation publishes educational and compliance resources and develops open-source software. Nothing the Foundation publishes, and nothing said in a Foundation community space, is legal advice or a guarantee of compliance with any law, regulation, or contractual obligation. You are responsible for your own compliance and for obtaining your own professional advice.
+
+**9. Intellectual property.** You will respect the Foundation's trademarks and the license terms of the Foundation's software and published materials. Any use of the Foundation's name, logo, or marks beyond what is expressly permitted requires separate written permission under the Foundation's Trademark Policy. Contributions of code or content are governed by the Foundation's Open Source Policy and its contributor terms.
+
+**10. Accuracy.** The information you provide will be truthful and current, and you will notify the Foundation promptly when it materially changes. Material misrepresentation is grounds for denial or revocation.
+
+**11. Conduct.** You will comply with the community standards in Article V of this policy and with the published rules of each Foundation platform, and with the reasonable directions of moderators. Good-faith criticism of the Foundation, its board, its software, its published positions, or its governance is never a violation of those standards and will never affect your participation.
+
+**12. Your information.** The Foundation will use the information you provide to administer the program, operate its community platforms, and communicate with you about the Foundation's work, which may include invitations to support the Foundation financially. The Foundation will not sell your information and will not disclose it to third parties except as required by law or as necessary to operate the program. You may opt out of Foundation communications at any time without affecting your participation.
+
+**13. Suspension, revocation, and withdrawal.** You may withdraw at any time. The Foundation may suspend or revoke participation on the grounds and through the process stated in Article VII of this policy, which includes written notice and one appeal to the Board of Directors. Revocation creates no claim against the Foundation.
+
+**14. Changes.** The Foundation may amend this policy at any time. You are bound by the version of these Terms in force on the date you were admitted, and a later version applies to you only if you accept it.
+
+**15. No contract for services.** Participation is not a contract for goods or services and creates no financial obligation on either party.
