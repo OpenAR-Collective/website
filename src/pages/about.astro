@@ -79,10 +79,7 @@ const description =
               <div>
                 <h3>{m.data.name}</h3>
                 <p class="office">{m.data.office}</p>
-                {/* Bios carry emphasis a director asked for, so the string is
-                    rendered as markup rather than escaped. The source is
-                    board.json in this repository, not anything submitted. */}
-                <p class="bio" set:html={m.data.bio} />
+                <p class="bio">{m.data.bio}</p>
                 <p class="contact">
                   <a href={`mailto:${m.data.email}`}>{m.data.email}</a>
                   <span aria-hidden="true">&middot;</span>
