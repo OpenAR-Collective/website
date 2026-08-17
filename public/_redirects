@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects. One rule per line: source, destination, status.
+
+# The launch release was published at its 8/14 slug for a few minutes on
+# 2026-08-17 before the release date moved to the 17th, so the old path may sit
+# in a crawler's index.
+/news/2026-08-14-openar-collective-launch/ /news/2026-08-17-openar-collective-launch/ 301

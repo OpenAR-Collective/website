@@ -1,13 +1,13 @@
 ---
 title: "Free Software for Collections, Built by the Industry, Answering to No One"
 description: "The OpenAR Collective launches with open-source software, freely published compliance resources, and a governance structure written to keep any single vendor, agency, or funder from taking control"
-date: 2026-08-14
+date: 2026-08-17
 category: "Press release"
-image: "/assets/news/2026-08-14-openar-collective-launch.png"
+image: "/assets/news/2026-08-17-openar-collective-launch.png"
 imageAlt: "OpenAR Collective wordmark over an amber hex grid glowing toward the upper right"
 ---
 
-**FORT WORTH, Texas, August 14, 2026.** A new nonprofit organization built to serve the accounts receivable and debt collection industry announced its formation today. The Open Accounts Receivable Collective Foundation, operating as The OpenAR Collective, will provide the industry with free, openly licensed software, open educational and compliance resources, and a peer community that belongs to its practitioners rather than to any company inside it.
+**FORT WORTH, Texas, August 17, 2026.** A new nonprofit organization built to serve the accounts receivable and debt collection industry announced its formation today. The Open Accounts Receivable Collective Foundation, operating as The OpenAR Collective, will provide the industry with free, openly licensed software, open educational and compliance resources, and a peer community that belongs to its practitioners rather than to any company inside it.
 
 The Foundation is a Delaware non-stock nonprofit corporation, incorporated April 13, 2026. Its software and published resources are free, no membership is required to use them, and it does not engage in lobbying or political advocacy.
 
