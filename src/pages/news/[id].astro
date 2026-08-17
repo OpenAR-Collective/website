@@ -76,6 +76,14 @@ const dateStr = entry.data.date.toLocaleDateString('en-US', {
     margin-top: 0.6rem;
   }
 
+  /* Press convention centers the end-of-release mark. It sits clear of the
+     media contact block so it reads as the end of the release rather than
+     as another line of contact information. */
+  .body :global(.end-mark) {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
   .back {
     margin-top: 3rem;
   }

@@ -65,4 +65,4 @@ The OpenAR Collective\
 [rob@openarcollective.org](mailto:rob@openarcollective.org)\
 [openarcollective.org](https://openarcollective.org)
 
-\###
+<p class="end-mark">###</p>
