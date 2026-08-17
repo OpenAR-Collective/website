@@ -30,5 +30,6 @@ Pull requests with unsigned commits will be asked to rebase before merge. The Fo
 
 - The site is static Astro with no client-side JavaScript unless a page genuinely needs it. Please do not introduce SSR, server functions, third-party embeds, analytics, or anything that would require a cookie banner.
 - Run `npm run build` before opening a pull request and confirm it completes cleanly.
+- Foundation materials use US English. `python scripts/check-us-spelling.py` reports British variants and exits non-zero if it finds any. Files under `src/content/policies` are quoted verbatim from Board-adopted documents, so report anything found there rather than editing it.
 
 Questions about this process can be directed to opensource@openarcollective.org.

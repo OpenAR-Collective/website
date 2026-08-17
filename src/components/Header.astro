@@ -1,0 +1,110 @@
+---
+import HexMark from './HexMark.astro';
+
+const links = [
+  { href: '/about', label: 'About' },
+  { href: '/programs', label: 'Programs' },
+  { href: '/news', label: 'News' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/supporters', label: 'Supporters' },
+  { href: '/contact', label: 'Contact' },
+];
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header>
+  <div class="wrap bar">
+    <a href="/" class="brand" aria-label="OpenAR Collective home">
+      <HexMark size={30} id="hex-nav" />
+      <span class="wordmark">Open<span class="ar">AR</span> Collective</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="plain">
+        {
+          links.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                aria-current={path === l.href || path.startsWith(`${l.href}/`) ? 'page' : undefined}
+              >
+                {l.label}
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a href="/join" class="btn btn-outline join">Join</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+  }
+
+  .wordmark {
+    font-family: var(--f-wordmark);
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--c-text);
+    white-space: nowrap;
+  }
+
+  .wordmark .ar {
+    color: var(--c-amber);
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--c-text-soft);
+  }
+
+  nav a:hover {
+    color: var(--c-text);
+  }
+
+  nav a[aria-current='page'] {
+    color: var(--c-amber);
+  }
+
+  nav a.join {
+    padding: 0.5rem 1.2rem;
+    color: var(--c-amber);
+  }
+
+  nav a.join:hover {
+    color: var(--c-amber-light);
+  }
+</style>

@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const supporters = (await getCollection('supporters')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name, 'en', { sensitivity: 'base' })
+);
+
+const description =
+  'The public roster of organizations that have signed the OpenAR Collective Mission Supporter Statement of Support.';
+---
+
+<Base title="Mission Supporters" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">Mission Supporters</p>
+      <h1>Organizations that support the mission</h1>
+      <p class="lede">
+        The organizations listed here have signed the Mission Supporter Statement of Support,
+        stating publicly that they support the Foundation's charitable mission. All organizations
+        appear on identical terms, in alphabetical order, with no tiers.
+      </p>
+    </div>
+
+    <div class="notice" role="note">
+      <p>
+        Listing on this roster reflects each organization's own statement of support for the
+        Foundation's mission. Listing is not a review, approval, or endorsement of any organization,
+        or of its products, services, or business practices, by the Foundation. Participating
+        organizations make no financial contribution to the Foundation.
+      </p>
+    </div>
+
+    {
+      supporters.length === 0 ? (
+        <p class="empty prose">
+          The roster will be published here as organizations sign the Statement of Support.
+          Organizations interested in participating can find the details on
+          the <a href="/join">join page</a>.
+        </p>
+      ) : (
+        <ul class="plain roster">
+          {supporters.map((s) => (
+            <li>
+              {s.data.website ? (
+                <a href={s.data.website} rel="noopener">
+                  {s.data.name}
+                </a>
+              ) : (
+                <span>{s.data.name}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .empty {
+    margin-top: 2rem;
+    color: var(--c-text-soft);
+  }
+
+  .roster {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+    gap: 1rem;
+    max-width: var(--w-wide);
+  }
+
+  .roster li {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    border: 1px solid var(--c-line);
+    border-radius: 3px;
+    background: var(--c-surface);
+    padding: 1rem 1.2rem;
+  }
+</style>

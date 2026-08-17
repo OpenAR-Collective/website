@@ -1,0 +1,32 @@
+[
+  {
+    "id": "legal-name",
+    "mark": "The Open Accounts Receivable Collective Foundation",
+    "note": "The Foundation's full legal name.",
+    "order": 1
+  },
+  {
+    "id": "openar-collective",
+    "mark": "OpenAR Collective",
+    "note": "The Foundation's trade name.",
+    "order": 2
+  },
+  {
+    "id": "hivear",
+    "mark": "HiveAR",
+    "note": "The Foundation's accounts receivable software platform.",
+    "order": 3
+  },
+  {
+    "id": "wax",
+    "mark": "Wax",
+    "note": "The Foundation's domain-agnostic application framework.",
+    "order": 4
+  },
+  {
+    "id": "visual-identity",
+    "mark": "Associated logos, wordmarks, and visual identity elements",
+    "note": "Including the honeycomb device, the OpenAR Collective wordmark, and the HiveAR wordmark in their published forms.",
+    "order": 5
+  }
+]

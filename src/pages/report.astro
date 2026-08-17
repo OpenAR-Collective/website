@@ -1,0 +1,195 @@
+---
+import Base from '../layouts/Base.astro';
+
+const description =
+  'How to report a concern about the OpenAR Collective under the Foundation Whistleblower Policy, and the protections that apply.';
+---
+
+<Base title="Report a Concern" description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="overline">Whistleblower reporting</p>
+      <h1>Report a concern</h1>
+      <p class="lede">
+        The Foundation wants to hear about conduct that may violate the law or a Foundation policy.
+        Reports can come from anyone, including community participants, contributors, contractors,
+        directors, officers, and members of the public.
+      </p>
+    </div>
+
+    <section aria-labelledby="protection">
+      <h2 id="protection">The protection</h2>
+      <p>
+        The Foundation prohibits retaliation against any person who makes a report in good faith or
+        who participates in an investigation, and a report made in good faith will never affect your
+        participation in the Foundation's community or programs. Reports are handled confidentially
+        to the extent possible consistent with a thorough investigation. Read the
+        full <a href="/policies/whistleblower/">Whistleblower Policy</a>.
+      </p>
+    </section>
+
+    <section class="section-gap" aria-labelledby="how">
+      <h2 id="how">How to report</h2>
+      <p class="intro">
+        The Whistleblower Policy provides three routes, described in Article III. Choose the one
+        that fits your situation.
+      </p>
+
+      <div class="routes">
+        <div class="route">
+          <h3>Direct report</h3>
+          <p>
+            Submit a report in writing to the Chair of the Board of Directors
+            at <a href="mailto:chair@openarcollective.org">chair@openarcollective.org</a>.
+          </p>
+        </div>
+
+        <div class="route">
+          <h3>Reports involving the Chair</h3>
+          <p>
+            If your concern involves the Chair, send it to the Vice Chair
+            at <a href="mailto:vicechair@openarcollective.org">vicechair@openarcollective.org</a> instead.
+            The Chair will not see reports sent to this address.
+          </p>
+        </div>
+
+        <div class="route route-wide">
+          <h3>Anonymous report</h3>
+          <p>To report anonymously, send a written report by postal mail with no return address.</p>
+          <div class="wide-body">
+            <address>
+              The Open Accounts Receivable Collective Foundation<br />
+              RE: Whistleblower Report<br />
+              3000 S Hulen Street<br />
+              Suite 124-735<br />
+              Fort Worth, TX 76109
+            </address>
+            <div class="wide-notes">
+              <p>
+                If your concern involves the Chair, address the envelope to <strong>ATTN: Vice
+                Chair</strong> or <strong>ATTN: Secretary</strong>. The Chair does not open mail
+                addressed that way.
+              </p>
+              <p>
+                Anonymous reports will be investigated to the extent possible given the information
+                provided.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice" role="note">
+        <p>
+          <strong>Email is not anonymous.</strong> A report sent to either address above identifies
+          your email address to the person who reads it. Postal mail without a return address is
+          the anonymous channel. The Foundation does not yet operate an anonymous electronic
+          reporting form, and this page will be updated when one is available.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-gap" aria-labelledby="include">
+      <h2 id="include">What to include</h2>
+      <p>
+        Reports should include a description of the conduct giving rise to the concern, the names of
+        the people involved if known, relevant dates, and any supporting documentation. A report
+        does not need to be exhaustive to trigger an investigation. A good-faith concern is enough.
+      </p>
+    </section>
+
+    <section class="section-gap" aria-labelledby="outside">
+      <h2 id="outside">Reporting to outside authorities</h2>
+      <p>
+        Nothing in the Whistleblower Policy prevents any person from reporting suspected violations
+        of law to appropriate governmental authorities, including the Internal Revenue Service,
+        state attorneys general, or law enforcement agencies. People who in good faith report
+        suspected violations to those authorities are protected under the policy.
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .section-gap {
+    margin-top: 2.75rem;
+  }
+
+  .intro {
+    margin-bottom: 1.5rem;
+  }
+
+  /* The two email channels sit side by side, with the longer anonymous route
+     spanning beneath them. */
+  .routes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .route-wide {
+    grid-column: 1 / -1;
+  }
+
+  @media (max-width: 44rem) {
+    .routes {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .wide-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 2.5rem;
+    align-items: start;
+    margin-top: 0.85rem;
+  }
+
+  @media (max-width: 44rem) {
+    .wide-body {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .wide-notes p:first-child {
+    margin-top: 0;
+  }
+
+  .route {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--c-line);
+    border-top: 3px solid var(--c-amber);
+    border-radius: 3px;
+    background: rgba(22, 20, 16, 0.5);
+    padding: 1.35rem 1.5rem 1.5rem;
+  }
+
+  .route h3 {
+    font-size: 1.08rem;
+  }
+
+  .route p {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--c-text-soft);
+  }
+
+  .route address {
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--c-line);
+    font-style: normal;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--c-text);
+  }
+
+  .notice {
+    margin-top: 1.75rem;
+  }
+</style>

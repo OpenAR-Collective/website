@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import HexMark from '../components/HexMark.astro';
+---
+
+<Base title="Page not found" description="The page you were looking for does not exist.">
+  <div class="wrap center">
+    <HexMark size={72} id="hex-404" />
+    <h1>Page not found</h1>
+    <p>
+      The page you were looking for does not exist or has moved. Try
+      the <a href="/">home page</a> or the <a href="/faq">FAQ</a>.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  h1 {
+    margin-top: 1.5rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: var(--c-text-soft);
+  }
+</style>

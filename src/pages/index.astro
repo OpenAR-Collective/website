@@ -1,181 +1,204 @@
 ---
+import Base from '../layouts/Base.astro';
+import HexMark from '../components/HexMark.astro';
 import HexGlow from '../components/HexGlow.astro';
 
 const description =
-  'The Open Accounts Receivable Collective Foundation works to make accounts receivable and debt collection more transparent, more compliant, and more accountable to the consumers it touches.';
+  'The OpenAR Collective provides the accounts receivable and debt collection industry with free open-source software, open educational and compliance resources, and a neutral peer community.';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OpenAR Collective</title>
-    <meta name="description" content={description} />
-    <meta property="og:title" content="OpenAR Collective" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://openarcollective.org/android-chrome-512x512.png" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#0E0D0B" />
-    <link
-      rel="preload"
-      href="/fonts/barlow-semibold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <meta name="generator" content={Astro.generator} />
-  </head>
-  <body>
-    <HexGlow />
-    <main>
-      <svg viewBox="46 73 420 366" width="96" height="84" aria-hidden="true">
-        <defs>
-          <linearGradient id="hex" x1="20%" y1="0%" x2="80%" y2="100%">
-            <stop offset="0%" stop-color="#F5B830"></stop>
-            <stop offset="100%" stop-color="#B87010"></stop>
-          </linearGradient>
-        </defs>
-        <polygon
-          points="456,256 356,429.205 156,429.205 56,256 156,82.795 356,82.795"
-          fill="url(#hex)"
-          stroke="#F8D060"
-          stroke-width="9"></polygon>
-      </svg>
+<Base title="OpenAR Collective" description={description}>
+  <HexGlow />
+  <section class="hero">
+    <div class="wrap">
+      <HexMark size={120} id="hex-hero" />
       <h1>Open<span class="ar">AR</span> Collective</h1>
-      <p class="legal-name">The Open Accounts Receivable Collective Foundation</p>
-      <p class="mission">
-        The Open Accounts Receivable Collective Foundation works to make accounts receivable and
-        debt collection more transparent, more compliant, and more accountable to the consumers it
-        touches. It builds software under an open-source license so anyone can run, inspect, modify,
-        and redistribute it at no cost. The Foundation also publishes open educational and
-        compliance resources, develops shared standards, delivers training, and maintains a neutral,
-        community-governed commons where practitioners learn from one another.
+      <p class="overline legal">The Open Accounts Receivable Collective Foundation</p>
+      <p class="tagline">
+        Free software, open knowledge, and a neutral community for the accounts receivable
+        industry. No fees, no paywalls, and no commercial agenda.
       </p>
-      <p class="status">
-        Our full website is on the way. Questions are welcome
-        at <a href="mailto:info@openarcollective.org">info@openarcollective.org</a>.
-      </p>
-    </main>
-    <footer>
-      <p>&copy; 2026 The Open Accounts Receivable Collective Foundation</p>
-    </footer>
-  </body>
-</html>
+      <div class="actions">
+        <a href="/join" class="btn btn-primary">Join the Collective</a>
+        <a href="/about" class="btn btn-outline">About the Foundation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section borderless" aria-labelledby="mission-heading">
+    <div class="wrap">
+      <p class="overline">Our mission</p>
+      <h2 id="mission-heading" class="sr-only">Our mission</h2>
+      <blockquote class="mission">
+        <p>
+          The Open Accounts Receivable Collective Foundation works to make accounts receivable and
+          debt collection more transparent, more compliant, and more accountable to the consumers it
+          touches. It builds software under an open-source license so anyone can run, inspect,
+          modify, and redistribute it at no cost. The Foundation also publishes open educational and
+          compliance resources, develops shared standards, delivers training, and maintains a
+          neutral, community-governed commons where practitioners learn from one another.
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="pillars-heading">
+    <div class="wrap">
+      <h2 id="pillars-heading" class="sr-only">What the Foundation does</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <p class="overline">01</p>
+          <h3>Open software</h3>
+          <p>
+            A production-grade accounts receivable and collections platform, to be released under an
+            open-source license, that any organization will be able to download, run, modify, and
+            redistribute without a vendor relationship, a license fee, or permission from anyone.
+            The platform is in its initial architecture and design phase.
+          </p>
+          <p><a href="/programs">Explore the software programs</a></p>
+        </div>
+        <div class="pillar">
+          <p class="overline">02</p>
+          <h3>Open knowledge</h3>
+          <p>
+            Compliance and regulatory resources, educational content, shared standards, training,
+            and a webinar series, to be published freely rather than gated behind membership or
+            sponsorship. These programs follow as the community forms.
+          </p>
+          <p><a href="/programs">See the knowledge programs</a></p>
+        </div>
+        <div class="pillar">
+          <p class="overline">03</p>
+          <h3>Neutral community</h3>
+          <p>
+            A peer space open to every practitioner in the industry, including compliance officers,
+            developers, operations managers, collectors, and agency owners, regardless of employer
+            size or trade association affiliation.
+          </p>
+          <p><a href="/join">Become part of the community</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="participate-heading">
+    <div class="wrap">
+      <p class="overline">Participate</p>
+      <h2 id="participate-heading">Two ways to stand with the mission</h2>
+      <div class="paths">
+        <p>
+          Individuals can become members: a free recognition of being part of the Foundation's
+          community, with access to the verified practitioner areas of its Discord server.
+          Organizations can sign on as Mission Supporters, stating publicly that they support the
+          Foundation's mission. Both cost nothing, and neither is available for purchase at any
+          price.
+        </p>
+        <p>
+          <a href="/join">Learn about membership and Mission Supporter status</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
 
 <style>
-  @font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('/fonts/barlow-semibold.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('/fonts/barlow-light.woff2') format('woff2');
-  }
-
-  /* Astro scopes a bare `*` to [data-astro-cid-...], an attribute selector that
-     outranks the unscoped `body` rule below and cancelled its side padding, so
-     the text sat flush against both edges of a phone screen. :global keeps the
-     reset at zero specificity, where a reset belongs. */
-  :global(*) {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    background: #0e0d0b;
-  }
-
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem 1.5rem;
-    background: radial-gradient(ellipse at 50% 30%, rgba(232, 160, 32, 0.06) 0%, transparent 65%);
-    color: #f4efe6;
-    font-family:
-      system-ui,
-      -apple-system,
-      'Segoe UI',
-      Roboto,
-      sans-serif;
+  .hero {
+    padding: 5rem 0 4.5rem;
     text-align: center;
+    background: radial-gradient(ellipse at 50% 20%, rgba(232, 160, 32, 0.07) 0%, transparent 65%);
   }
 
-  main {
+  .hero .wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 46rem;
   }
 
-  h1 {
-    margin-top: 1.5rem;
-    font-family: 'Barlow', system-ui, sans-serif;
+  .hero h1 {
+    margin-top: 1.75rem;
+    font-family: var(--f-wordmark);
     font-weight: 600;
-    font-size: clamp(2rem, 6vw, 3rem);
-    letter-spacing: -0.01em;
+    font-size: clamp(2.4rem, 6.5vw, 3.4rem);
+    letter-spacing: 0.01em;
   }
 
-  .ar {
-    color: #e8a020;
+  .hero .ar {
+    color: var(--c-amber);
   }
 
-  .legal-name {
-    margin-top: 0.5rem;
-    font-family: 'Barlow', system-ui, sans-serif;
-    font-weight: 300;
-    font-size: 0.95rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #888070;
+  .legal {
+    margin-top: 0.75rem;
+    /* 0.62 alpha measured 3.95:1 against the page ground, short of the 4.5:1
+       this size and weight require. */
+    color: rgba(232, 160, 32, 0.72);
+  }
+
+  .tagline {
+    margin-top: 1.75rem;
+    max-width: 34rem;
+    color: var(--c-text-soft);
+    font-size: 1.15rem;
+  }
+
+  .actions {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .mission {
-    margin-top: 2rem;
-    font-size: 1.05rem;
-    font-weight: 300;
-    line-height: 1.75;
-    color: rgba(244, 239, 230, 0.82);
-    text-align: justify;
+    margin-top: 1.25rem;
+    border-left: 3px solid var(--c-amber);
+    padding-left: 1.5rem;
+    font-size: 1.12rem;
+    color: var(--c-text-soft);
   }
 
-  .status {
-    margin-top: 2rem;
-    font-size: 1rem;
-    line-height: 1.6;
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
   }
 
-  a {
-    color: #e8a020;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  @media (max-width: 52rem) {
+    .pillars {
+      grid-template-columns: 1fr;
+    }
   }
 
-  a:hover {
-    color: #f5c050;
+  .pillar h3 {
+    margin: 0.6rem 0 0.75rem;
   }
 
-  a:focus-visible {
-    outline: 2px solid #e8a020;
-    outline-offset: 3px;
-    border-radius: 2px;
+  .pillar p {
+    color: var(--c-text-soft);
+    font-size: 0.98rem;
   }
 
-  footer {
-    font-size: 0.85rem;
-    color: #888070;
+  .pillar p + p {
+    margin-top: 0.75rem;
+  }
+
+  .paths {
+    margin-top: 1.25rem;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+  }
+
+  .borderless {
+    border-top: none;
   }
 </style>
