@@ -206,37 +206,25 @@ const description =
 </Base>
 
 <style>
-  /* Long-form legal prose, so this matches the governance documents under
-     /policies: same measure, same heading rhythm, same rule between sections.
-     The global .prose class carries only a paragraph rule, which left every
-     heading and the processor list with no spacing of their own at all. */
-  .prose {
-    max-width: 43rem;
-  }
-
+  /* Matches the body pages rather than the governance documents: the full
+     .wrap measure, and the 3rem gap About puts between its sections. About
+     wraps each heading in its own section to get that gap; this page keeps
+     all thirteen parts in one section, so the gap sits on the headings. */
   .prose h2 {
-    margin: 2.5rem 0 1.25rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--c-line);
-    font-size: 1.35rem;
-    letter-spacing: 0.01em;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 
-  /* The first heading opens the document, so it needs no rule above it. */
+  /* The first heading opens the document rather than dividing it. */
   .prose h2:first-child {
     margin-top: 0;
-    padding-top: 0;
-    border-top: none;
   }
 
-  .prose p {
-    color: var(--c-text-soft);
-  }
-
+  /* .prose styles paragraphs and nothing else, so the list arrived with no
+     margins and no left padding, which hung its bullets outside the column. */
   .prose ul {
     margin: 1rem 0;
     padding-left: 1.5rem;
-    color: var(--c-text-soft);
   }
 
   .prose li {
