@@ -206,9 +206,40 @@ const description =
 </Base>
 
 <style>
-  /* Long-form legal prose, so the measure matches the governance documents
-     under /policies rather than the wider marketing pages. */
+  /* Long-form legal prose, so this matches the governance documents under
+     /policies: same measure, same heading rhythm, same rule between sections.
+     The global .prose class carries only a paragraph rule, which left every
+     heading and the processor list with no spacing of their own at all. */
   .prose {
     max-width: 43rem;
+  }
+
+  .prose h2 {
+    margin: 2.5rem 0 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--c-line);
+    font-size: 1.35rem;
+    letter-spacing: 0.01em;
+  }
+
+  /* The first heading opens the document, so it needs no rule above it. */
+  .prose h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .prose p {
+    color: var(--c-text-soft);
+  }
+
+  .prose ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    color: var(--c-text-soft);
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
   }
 </style>
