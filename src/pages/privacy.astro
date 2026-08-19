@@ -18,19 +18,21 @@ const description =
     </div>
 
     <section class="prose" aria-labelledby="short">
-      <h2 id="short">The short version</h2>
-      <p>
-        The public website does not track you. It sets no cookies, runs no analytics, and loads
-        nothing from a third party. You can read everything the Foundation publishes without telling
-        us who you are, and nothing we publish requires membership to access. We do not track our
-        email either.
-      </p>
-      <p>
-        We collect personal information only when you give it to us, which happens when you apply
-        for membership, when your organization signs the Statement of Support, or when you connect a
-        Discord account. We do not sell it, we do not publish it, we do not use it for advertising, and
-        we do not use it for lobbying or political advocacy.
-      </p>
+      <div class="summary">
+        <h2 id="short">The short version</h2>
+        <p>
+          The public website does not track you. It sets no cookies, runs no analytics, and loads
+          nothing from a third party. You can read everything the Foundation publishes without
+          telling us who you are, and nothing we publish requires membership to access. We do not
+          track our email either.
+        </p>
+        <p>
+          We collect personal information only when you give it to us, which happens when you apply
+          for membership, when your organization signs the Statement of Support, or when you connect
+          a Discord account. We do not sell it, we do not publish it, we do not use it for
+          advertising, and we do not use it for lobbying or political advocacy.
+        </p>
+      </div>
 
       <h2 id="visiting">When you visit openarcollective.org</h2>
       <p>
@@ -215,9 +217,26 @@ const description =
     margin-bottom: 1rem;
   }
 
-  /* The first heading opens the document rather than dividing it. */
-  .prose h2:first-child {
+  /* The first heading opens the document rather than dividing it. It now sits
+     inside the summary panel, so it is that panel's first child rather than
+     the section's. */
+  .prose .summary h2 {
     margin-top: 0;
+  }
+
+  /* The summary is the part a hurried reader will actually read, so it takes
+     the callout treatment the trademark page already uses: the shared surface
+     panel with an amber rule down its left edge. */
+  .summary {
+    border: 1px solid var(--c-line);
+    border-left: 3px solid var(--c-amber);
+    border-radius: 3px;
+    background: var(--c-surface);
+    padding: 1.75rem 1.9rem;
+  }
+
+  .summary p {
+    color: var(--c-text-soft);
   }
 
   /* .prose styles paragraphs and nothing else, so the list arrived with no
