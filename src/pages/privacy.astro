@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 
 const description =
   'What The Open Accounts Receivable Collective Foundation collects, why, who else processes it, and how to get it corrected or removed.';
-const effective = 'August 18, 2026';
 ---
 
 <Base title="Privacy" description={description}>
@@ -16,7 +15,6 @@ const effective = 'August 18, 2026';
         and what you can ask us to do about it. It covers openarcollective.org,
         join.openarcollective.org, the Foundation's Discord server, and the email we send.
       </p>
-      <p class="meta">Effective {effective}</p>
     </div>
 
     <section class="prose" aria-labelledby="short">
@@ -30,7 +28,7 @@ const effective = 'August 18, 2026';
       <p>
         We collect personal information only when you give it to us, which happens when you apply
         for membership, when your organization signs the Statement of Support, or when you connect a
-        Discord account. We do not sell it, we do not rent it, we do not use it for advertising, and
+        Discord account. We do not sell it, we do not publish it, we do not use it for advertising, and
         we do not use it for lobbying or political advocacy.
       </p>
 
@@ -159,7 +157,7 @@ const effective = 'August 18, 2026';
       <h2 id="rights">Your choices</h2>
       <p>
         You can ask us what we hold about you, ask us to correct it, ask us to remove it, or ask us
-        to take your organization off the Mission Supporter roster. Write to
+        to take your organization off the Mission Supporter roster. Write to{' '}
         <a href="mailto:membership@openarcollective.org">membership@openarcollective.org</a> and a
         person will answer. We will not require you to justify the request.
       </p>
@@ -192,14 +190,13 @@ const effective = 'August 18, 2026';
 
       <h2 id="changes">Changes to this notice</h2>
       <p>
-        If we change what we collect or who processes it, we will update this notice and change the
-        effective date above. Material changes affecting current members will also go to the
-        members-only email list.
+        If we change what we collect or who processes it, we will update this notice. Material
+        changes affecting current members will also go to the members-only email list.
       </p>
 
       <h2 id="contact">Contact</h2>
       <p>
-        Questions about this notice, or about anything the Foundation holds, go to
+        Questions about this notice, or about anything the Foundation holds, go to{' '}
         <a href="mailto:membership@openarcollective.org">membership@openarcollective.org</a>. The
         Foundation is The Open Accounts Receivable Collective Foundation, a Delaware nonprofit
         corporation operating as The OpenAR Collective.
@@ -213,11 +210,5 @@ const effective = 'August 18, 2026';
      under /policies rather than the wider marketing pages. */
   .prose {
     max-width: 43rem;
-  }
-
-  .meta {
-    color: var(--c-muted);
-    font-size: 0.9rem;
-    margin-top: 0.75rem;
   }
 </style>
