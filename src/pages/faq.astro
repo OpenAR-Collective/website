@@ -202,4 +202,17 @@ const description =
   .answer :global(li) {
     margin-bottom: 0.4rem;
   }
+
+  /* Copy-paste blocks, like the AI assistant prompt in the contributing
+     entry, wrap instead of forcing a horizontal scroll on small screens. */
+  .answer :global(pre) {
+    margin-top: 0.85rem;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid var(--c-line);
+    border-radius: 3px;
+    background: rgba(22, 20, 16, 0.7);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    line-height: 1.55;
+  }
 </style>
