@@ -97,6 +97,32 @@ const description =
   </div>
 </Base>
 
+<script>
+  // Give every prompt block in an answer a clipboard button. textContent
+  // rather than innerText so the copied text is the exact source, including
+  // its own line breaks, not the soft-wrapped rendering.
+  for (const pre of document.querySelectorAll('.answer pre')) {
+    const box = document.createElement('div');
+    box.className = 'prompt-box';
+    pre.replaceWith(box);
+    box.appendChild(pre);
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.setAttribute('aria-label', 'Copy the prompt to the clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pre.textContent?.trim() ?? '').then(
+        () => (btn.textContent = 'Copied'),
+        () => (btn.textContent = 'Copy failed')
+      );
+      setTimeout(() => (btn.textContent = 'Copy'), 2000);
+    });
+    box.appendChild(btn);
+  }
+</script>
+
 <style>
   .toc {
     display: grid;
@@ -203,7 +229,7 @@ const description =
     margin-bottom: 0.4rem;
   }
 
-  /* Copy-paste blocks, like the AI assistant prompt in the contributing
+  /* Copy-paste blocks, like the AI assistant prompts in the contributing
      entry, wrap instead of forcing a horizontal scroll on small screens. */
   .answer :global(pre) {
     margin-top: 0.85rem;
@@ -214,5 +240,45 @@ const description =
     white-space: pre-wrap;
     overflow-wrap: break-word;
     line-height: 1.55;
+  }
+
+  /* The script below wraps each answer pre in a .prompt-box so the copy
+     button can anchor to the box corner instead of scrolling with the text.
+     The wrapper takes over the pre's top margin, and the extra right padding
+     keeps the first line clear of the button. */
+  .answer :global(.prompt-box) {
+    position: relative;
+    margin-top: 0.85rem;
+  }
+
+  .answer :global(.prompt-box pre) {
+    margin-top: 0;
+    padding-right: 4.75rem;
+  }
+
+  .answer :global(.copy-btn) {
+    position: absolute;
+    top: 0.45rem;
+    right: 0.45rem;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--c-line);
+    border-radius: 3px;
+    background: rgba(22, 20, 16, 0.92);
+    color: var(--c-text-soft);
+    font-family: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+
+  .answer :global(.copy-btn:hover) {
+    color: var(--c-amber-light);
+    border-color: var(--c-amber);
+  }
+
+  /* Long prompts, marked .prompt-tall in the markdown, scroll inside a
+     capped box instead of stretching the page. */
+  .answer :global(.prompt-tall pre) {
+    max-height: 16rem;
+    overflow-y: auto;
   }
 </style>
