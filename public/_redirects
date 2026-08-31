@@ -9,3 +9,7 @@
 # 302 rather than 301 so the target can move, to a future /press page for
 # instance, without a permanently cached redirect stranding anyone.
 /brochure /assets/docs/openar-collective-brochure.pdf 302
+
+# The design decisions record's spoken-word address. 302 so the target can
+# move if the record ever gets its own page on this site.
+/design https://github.com/OpenAR-Collective/platform-design 302
