@@ -276,9 +276,14 @@ const description =
   }
 
   /* Long prompts, marked .prompt-tall in the markdown, scroll inside a
-     capped box instead of stretching the page. */
+     capped box instead of stretching the page. The copy button sits further
+     in on these so it clears the scrollbar track. */
   .answer :global(.prompt-tall pre) {
-    max-height: 16rem;
+    max-height: 11rem;
     overflow-y: auto;
+  }
+
+  .answer :global(.prompt-tall .copy-btn) {
+    right: 1.6rem;
   }
 </style>
