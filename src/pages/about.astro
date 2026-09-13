@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import ExternalLink from '../components/ExternalLink.astro';
 import { getCollection } from 'astro:content';
 
 const board = (await getCollection('board')).sort((a, b) => a.data.order - b.data.order);
@@ -87,7 +88,11 @@ const description =
                 <p class="contact">
                   <a href={`mailto:${m.data.email}`}>{m.data.email}</a>
                   <span aria-hidden="true">&middot;</span>
-                  <a href={m.data.linkedin} rel="noopener">LinkedIn</a>
+                  <ExternalLink
+                    href={m.data.linkedin}
+                    label="LinkedIn"
+                    name={`${m.data.name} on LinkedIn`}
+                  />
                 </p>
               </div>
             </li>

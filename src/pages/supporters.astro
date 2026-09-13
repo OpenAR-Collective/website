@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import ExternalLink from '../components/ExternalLink.astro';
 import { getCollection } from 'astro:content';
 
 const supporters = (await getCollection('supporters')).sort((a, b) =>
@@ -43,9 +44,7 @@ const description =
           {supporters.map((s) => (
             <li>
               {s.data.website ? (
-                <a href={s.data.website} rel="noopener">
-                  {s.data.name}
-                </a>
+                <ExternalLink href={s.data.website} label={s.data.name} />
               ) : (
                 <span>{s.data.name}</span>
               )}
