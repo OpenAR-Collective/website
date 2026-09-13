@@ -15,7 +15,7 @@ const supporters = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/supporters' }),
   schema: z.object({
     name: z.string(),
-    website: z.string().url().optional(),
+    website: z.string().url().startsWith('https://').optional(),
   }),
 });
 
@@ -50,7 +50,7 @@ const board = defineCollection({
     bio: z.string(),
     photo: z.string(),
     email: z.string().email(),
-    linkedin: z.string().url(),
+    linkedin: z.string().url().startsWith('https://'),
     order: z.number(),
   }),
 });
