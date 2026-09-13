@@ -1,5 +1,6 @@
 ---
 import HexMark from './HexMark.astro';
+import ExternalLink from './ExternalLink.astro';
 
 const columns = [
   {
@@ -47,7 +48,11 @@ const year = new Date().getFullYear();
           <ul class="plain">
             {col.links.map((l) => (
               <li>
-                <a href={l.href}>{l.label}</a>
+                {l.href.startsWith('http') ? (
+                  <ExternalLink href={l.href} label={l.label} />
+                ) : (
+                  <a href={l.href}>{l.label}</a>
+                )}
               </li>
             ))}
           </ul>

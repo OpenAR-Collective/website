@@ -1,0 +1,51 @@
+---
+// Every link that leaves openarcollective.org goes through here, so the
+// Foundation's stance on external links is set in one place: a new tab, no
+// referrer passed to the other company, and a marker that says so to both
+// sighted and screen reader visitors.
+//
+// rel carries noopener as well as noreferrer. noreferrer already implies it,
+// and target="_blank" has implied it in every shipping browser since 2021,
+// but the pair is the form contributors recognize and it costs nothing.
+//
+// The new-tab warning rides on aria-label rather than on visually hidden text
+// so that it is part of the computed name in every assistive technology. The
+// label always begins with the visible text, which is what WCAG 2.5.3 asks of
+// a control whose accessible name is set this way.
+//
+// The arrow icon is styled by .ext-icon in global.css, shared with the hast
+// plugin in astro.config.mjs that gives Markdown links the same treatment.
+//
+// name overrides the spoken form where the visible text repeats down a page,
+// as the directors' LinkedIn links do, and each one needs a distinct name.
+interface Props {
+  href: string;
+  label: string;
+  name?: string;
+  class?: string;
+}
+const { href, label, name, class: className } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={['external', className]}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`${name ?? label} (opens in a new tab)`}
+  >{label}<svg
+    class="ext-icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <path d="M15 3h6v6"></path>
+    <path d="M10 14 21 3"></path>
+  </svg></a
+>

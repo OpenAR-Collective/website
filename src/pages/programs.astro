@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import ExternalLink from '../components/ExternalLink.astro';
 
 const description =
   'The programs the OpenAR Collective is organized to run: open-source software, open knowledge, shared standards, training, and a neutral practitioner community, with the current status of each.';
@@ -40,7 +41,7 @@ const description =
         The platform is in its initial architecture and design phase, and no source has been
         published yet. It will be released under the Apache License, Version 2.0, with source code
         published publicly on
-        the <a href="https://github.com/OpenAR-Collective" rel="noopener">GitHub organization</a> and
+        the <ExternalLink href="https://github.com/OpenAR-Collective" label="GitHub organization" /> and
         outside contributions accepted under the Developer Certificate of Origin. Compliance is a
         design principle rather than an add-on: tamper-evident audit trails, fine-grained access
         controls, and configurable compliance workflows are core architectural commitments.

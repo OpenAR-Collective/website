@@ -106,6 +106,20 @@ a:hover {
   color: var(--c-amber-light);
 }
 
+/* The arrow on links that leave the site. It lives here rather than in
+   ExternalLink.astro because Markdown links get the same icon from the hast
+   plugin in astro.config.mjs, which scoped component styles would not reach.
+   The universal reset above forces a font size onto every element, so the
+   icon has to take the link's size back before em units mean anything. */
+.ext-icon {
+  font-size: inherit;
+  width: 0.72em;
+  height: 0.72em;
+  margin-left: 0.25em;
+  vertical-align: -0.04em;
+  flex-shrink: 0;
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--c-amber);
