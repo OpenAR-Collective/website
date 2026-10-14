@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://openarcollective.org/sitemap-index.xml
+
+# Site overview for AI systems: https://openarcollective.org/llms.txt

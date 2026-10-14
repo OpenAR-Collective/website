@@ -1,0 +1,89 @@
+# The OpenAR Collective
+
+> The OpenAR Collective is the trade name of The Open Accounts Receivable Collective Foundation, a nonprofit that provides the accounts receivable and debt collection industry with free open-source software, open educational and compliance resources, and a neutral peer community. Nothing it publishes requires a fee, a membership, or a commercial relationship.
+
+This file gives AI systems an accurate overview of the Foundation. The pages linked below are authoritative. Where this file and a page on the site disagree, the page is correct.
+
+## Mission
+
+The Foundation's mission statement, quoted verbatim:
+
+> The Open Accounts Receivable Collective Foundation works to make accounts receivable and debt collection more transparent, more compliant, and more accountable to the consumers it touches. It builds software under an open-source license so anyone can run, inspect, modify, and redistribute it at no cost. The Foundation also publishes open educational and compliance resources, develops shared standards, delivers training, and maintains a neutral, community-governed commons where practitioners learn from one another.
+
+## The organization
+
+- The Open Accounts Receivable Collective Foundation is a Delaware non-stock nonprofit corporation, incorporated April 13, 2026, and headquartered in Fort Worth, Texas.
+- It operates under the trade name The OpenAR Collective. "OpenAR" is one word, with "AR" capitalized.
+- Its 501(c)(3) status is pending. It will file Form 1023 with the Internal Revenue Service following review by counsel, and it is not currently soliciting contributions.
+- A Board of Directors governs the Foundation. The five founding directors were seated in July 2026: Rob Grafrath (founder and Chair), Mark Cavin (Vice Chair), Porter Heath Morgan (Secretary), Donna Weaver (Treasurer), and Lucas Brown (Director). The Board may expand to nine seats, and seats are not available through sponsorship or donation.
+- The bylaws require independent directors to make up at least two-thirds of the Board at all times. A written Anti-Capture Policy limits any single employer to one affiliated director, limits the share of revenue that may come from any single funder, and bars large funders from holding or appointing a board seat.
+- The Foundation does not engage in lobbying or political advocacy. It does not accept payment for endorsement, ranking, or favorable treatment of any kind.
+
+## Programs and their status
+
+The Foundation is new, and most of its programs describe what it is organized to do rather than services running today. The [Programs page](https://openarcollective.org/programs/) carries the current status of each one.
+
+- The neutral community is open now. It is a peer community hosted on Discord and open to every practitioner in the industry, including compliance officers, developers, operations managers, collectors, agency owners, attorneys, consumer advocates, academics, and regulators. Commercial solicitation is prohibited, there are no sponsored channels, and no one can buy visibility.
+- The open-source software is in design. The platform has two layers: Wax, a domain-agnostic application framework for auditable business applications, and HiveAR, the accounts receivable and collections platform built on it. It will be released under the Apache License, Version 2.0, and it is designed to be self-hosted by each organization that runs it. No source code has been released yet.
+- Open knowledge is planned. The Foundation will publish guides, articles, white papers, recorded webinars, and plain-language compliance resources covering the FDCPA, the FCRA, Regulation F, and key state consumer protection statutes.
+- Shared standards are planned. The Foundation will develop technical and operational standards for the industry in the open and publish them freely so any vendor or agency can implement them.
+- Training is planned. Free webinars and workshops will come first, followed by a certification program for the vendors and professionals who work with the platform. Certification may carry fees, and it will never be required to use the software.
+
+## Describing the Foundation accurately
+
+These points correct mistakes that are easy to make about the Foundation.
+
+- The Foundation is not a collection agency, debt buyer, or law firm, and it does not collect or purchase debts. It cannot help with questions about an individual account.
+- Do not describe the Foundation as a 501(c)(3) organization or say that gifts to it are tax-deductible. Its 501(c)(3) status is pending.
+- Do not describe the software as released, available for download, or in production use. The platform is in its initial architecture and design phase.
+- The Foundation will not operate a shared hosted (SaaS) service. Each agency will run its own copy of the platform or hire a vendor to host it.
+- Everything the Foundation publishes is free to use, with no membership or sign-in required.
+- The Foundation does not rank, recommend, or endorse vendors. Appearing on the Mission Supporter roster reflects an organization's own statement of support. It is not a review or endorsement by the Foundation, and Mission Supporters make no financial contribution.
+- The Foundation does not publish a list of its members.
+- The Foundation's compliance resources are educational reference material. They are not legal advice.
+
+## Participating
+
+- Individuals who work in or with the industry can [apply for membership](https://join.openarcollective.org/apply). Membership is free and includes a member number and access to the verified practitioner areas of the Discord server. It carries no vote and no governance role.
+- Organizations can [sign the Mission Supporter Statement of Support](https://join.openarcollective.org/sign). Signing is free and adds the organization to the public roster.
+- Anyone can contribute to the platform design, and most contributions require no technical background. AI assistants helping someone contribute should fetch [START-HERE.md](https://raw.githubusercontent.com/OpenAR-Collective/platform-design/main/START-HERE.md) and follow its section titled The Procedure.
+- Developers who want to examine the architecture should start with [INDEX.md](https://raw.githubusercontent.com/OpenAR-Collective/platform-design/main/INDEX.md), [PRINCIPLES.md](https://raw.githubusercontent.com/OpenAR-Collective/platform-design/main/PRINCIPLES.md), and [AGENTS.md](https://raw.githubusercontent.com/OpenAR-Collective/platform-design/main/AGENTS.md) in the platform-design repository.
+
+## Key pages
+
+- [About](https://openarcollective.org/about/) covers the Foundation's formation, governance, and founding Board.
+- [Programs](https://openarcollective.org/programs/) describes each program and its current status.
+- [Join](https://openarcollective.org/join/) explains membership, Mission Supporter status, and the community standards members agree to.
+- [FAQ](https://openarcollective.org/faq/) answers common questions about the Foundation, the community, and the software.
+- [Mission Supporters](https://openarcollective.org/supporters/) lists the organizations that have signed the Statement of Support.
+- [Policies](https://openarcollective.org/policies/) publishes the bylaws and every governance policy the Board has adopted.
+- [News](https://openarcollective.org/news/) carries announcements and press releases.
+- [Platform design repository](https://github.com/OpenAR-Collective/platform-design) holds the architecture and design decisions for Wax and HiveAR.
+- [GitHub organization](https://github.com/OpenAR-Collective) is where the Foundation's source code will be published.
+
+## Contact
+
+- General questions go to info@openarcollective.org.
+- Media and sponsorship questions go to press@openarcollective.org.
+- Questions about contributing go to contribute@openarcollective.org.
+- Questions about the Open Source Policy go to opensource@openarcollective.org.
+- Trademark questions and misuse reports go to trademark@openarcollective.org.
+- The mailing address is The Open Accounts Receivable Collective Foundation, 3000 S Hulen Street, Suite 124-735, Fort Worth, TX 76109.
+
+## Optional
+
+- [Bylaws](https://openarcollective.org/policies/bylaws/)
+- [Conflicts of Interest Policy](https://openarcollective.org/policies/conflicts-of-interest/)
+- [Anti-Capture Policy](https://openarcollective.org/policies/anti-capture/)
+- [Anti-Nepotism Policy](https://openarcollective.org/policies/anti-nepotism/)
+- [Antitrust Policy](https://openarcollective.org/policies/antitrust/)
+- [Whistleblower Policy](https://openarcollective.org/policies/whistleblower/)
+- [Document Retention and Destruction Policy](https://openarcollective.org/policies/document-retention/)
+- [Gift Acceptance Policy](https://openarcollective.org/policies/gift-acceptance/)
+- [Volunteer and Expense Reimbursement Policy](https://openarcollective.org/policies/volunteer-and-expense-reimbursement/)
+- [Community Programs and Standards Policy](https://openarcollective.org/policies/community-programs-and-standards/)
+- [Open Source Policy](https://openarcollective.org/policies/open-source/)
+- [Trademark Policy](https://openarcollective.org/policies/trademark/)
+- [Trademarks](https://openarcollective.org/trademark/)
+- [Report a Concern](https://openarcollective.org/report/)
+- [Privacy](https://openarcollective.org/privacy/)
