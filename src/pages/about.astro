@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 const board = (await getCollection('board')).sort((a, b) => a.data.order - b.data.order);
 
 const description =
-  'How The Open Accounts Receivable Collective Foundation is formed, structured, and governed, and the founding Board of Directors.';
+  'How The Open Accounts Receivable Collective Foundation is formed, structured, and governed, and its Board of Directors.';
 ---
 
 <Base title="About" description={description}>
@@ -68,10 +68,9 @@ const description =
     </section>
 
     <section class="section-gap" aria-labelledby="board">
-      <h2 id="board">The founding Board</h2>
+      <h2 id="board">The Board</h2>
       <p class="board-intro">
-        The Foundation's five founding directors were seated in July 2026 and elected officers at
-        the Board's organizational meeting. The Board may expand to as many as nine seats. The
+        The Foundation has six directors. The Board may expand to as many as nine seats. The
         Foundation intends to fill the remaining seats from people who are actively contributing to
         the community, drawn from a range of backgrounds and perspectives rather than from a single
         corner of the industry. Seats are not available through sponsorship or donation.

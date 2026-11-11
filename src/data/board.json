@@ -48,5 +48,15 @@
     "linkedin": "https://www.linkedin.com/in/lucas-brown-0961244/",
     "order": 5,
     "email": "lucas@openarcollective.org"
+  },
+  {
+    "id": "john-erickson",
+    "name": "John Erickson",
+    "office": "Director",
+    "bio": "CEO of Credit Service Intl., a nationwide accounts receivable management company he has led since 2011, with more than 20 years in the industry and more than 15 agency acquisitions completed through the company's M&A team. He is also Editor-in-Residence at R.O. Hammer Companies, a content platform for professional service providers, where he interviews industry leaders on the company's podcast, and he speaks and moderates frequently at industry events.",
+    "photo": "/assets/board/JohnErickson.jpg",
+    "linkedin": "https://www.linkedin.com/in/followjohnerickson/",
+    "order": 6,
+    "email": "john@openarcollective.org"
   }
 ]
