@@ -15,7 +15,7 @@ The Foundation's mission statement, quoted verbatim:
 - The Open Accounts Receivable Collective Foundation is a Delaware non-stock nonprofit corporation, incorporated April 13, 2026, and headquartered in Fort Worth, Texas.
 - It operates under the trade name The OpenAR Collective. "OpenAR" is one word, with "AR" capitalized.
 - Its 501(c)(3) status is pending. It will file Form 1023 with the Internal Revenue Service following review by counsel, and it is not currently soliciting contributions.
-- A Board of Directors governs the Foundation. The five founding directors were seated in July 2026: Rob Grafrath (founder and Chair), Mark Cavin (Vice Chair), Porter Heath Morgan (Secretary), Donna Weaver (Treasurer), and Lucas Brown (Director). The Board may expand to nine seats, and seats are not available through sponsorship or donation.
+- A Board of Directors governs the Foundation. It has six directors: Rob Grafrath (founder and Chair), Mark Cavin (Vice Chair), Porter Heath Morgan (Secretary), Donna Weaver (Treasurer), Lucas Brown (Director), and John Erickson (Director). The Board may expand to nine seats, and seats are not available through sponsorship or donation.
 - The bylaws require independent directors to make up at least two-thirds of the Board at all times. A written Anti-Capture Policy limits any single employer to one affiliated director, limits the share of revenue that may come from any single funder, and bars large funders from holding or appointing a board seat.
 - The Foundation does not engage in lobbying or political advocacy. It does not accept payment for endorsement, ranking, or favorable treatment of any kind.
 
@@ -51,7 +51,7 @@ These points correct mistakes that are easy to make about the Foundation.
 
 ## Key pages
 
-- [About](https://openarcollective.org/about/) covers the Foundation's formation, governance, and founding Board.
+- [About](https://openarcollective.org/about/) covers the Foundation's formation, governance, and Board of Directors.
 - [Programs](https://openarcollective.org/programs/) describes each program and its current status.
 - [Join](https://openarcollective.org/join/) explains membership, Mission Supporter status, and the community standards members agree to.
 - [FAQ](https://openarcollective.org/faq/) answers common questions about the Foundation, the community, and the software.
